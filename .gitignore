@@ -1,0 +1,6 @@
+.omx/
+.openchrome/
+.DS_Store
+node_modules/
+dist/
+build/

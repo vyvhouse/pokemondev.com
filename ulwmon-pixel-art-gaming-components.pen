@@ -1,0 +1,1174 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "board",
+      "x": 0,
+      "y": 0,
+      "name": "ULWmon Pixel Art Gaming Website Pencil Kit",
+      "width": 1440,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 135,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "#F4EBA7",
+            "position": 0
+          },
+          {
+            "color": "#FFFFFF",
+            "position": 0.48
+          },
+          {
+            "color": "#80EED3",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "vertical",
+      "gap": 30,
+      "padding": 48,
+      "children": [
+        {
+          "type": "text",
+          "id": "title",
+          "fill": "$ref-ink",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Pixel Art Gaming Website — Pencil Component Kit",
+          "lineHeight": 1.05,
+          "fontFamily": "$font-sans",
+          "fontSize": 54
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "fill": "#555555",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Built from the two local PNG references. Typography intent: Press Start 2P for pixel labels, Airbnb Cereal for display/body; Pencil-safe fallback uses IBM Plex Sans KR.",
+          "lineHeight": 1.35,
+          "fontFamily": "$font-sans",
+          "fontSize": 20
+        },
+        {
+          "type": "frame",
+          "id": "palette",
+          "name": "Extracted Color Palette",
+          "width": 1320,
+          "height": 132,
+          "gap": 18,
+          "children": [
+            {
+              "type": "frame",
+              "id": "sw_0",
+              "name": "Blue",
+              "width": "fill_container",
+              "height": 122,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 18,
+                  "id": "swatch_0",
+                  "fill": "#5FDBFD",
+                  "width": "fill_container",
+                  "height": 78,
+                  "stroke": {
+                    "thickness": 0,
+                    "fill": "#D7D7D7"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "swatch_label_0",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "#5FDBFD",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sw_1",
+              "name": "Cream",
+              "width": "fill_container",
+              "height": 122,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 18,
+                  "id": "swatch_1",
+                  "fill": "#F4EBA7",
+                  "width": "fill_container",
+                  "height": 78,
+                  "stroke": {
+                    "thickness": 0,
+                    "fill": "#D7D7D7"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "swatch_label_1",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "#F4EBA7",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sw_2",
+              "name": "Yellow",
+              "width": "fill_container",
+              "height": 122,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 18,
+                  "id": "swatch_2",
+                  "fill": "#F9C62C",
+                  "width": "fill_container",
+                  "height": 78,
+                  "stroke": {
+                    "thickness": 0,
+                    "fill": "#D7D7D7"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "swatch_label_2",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "#F9C62C",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sw_3",
+              "name": "Mint",
+              "width": "fill_container",
+              "height": 122,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 18,
+                  "id": "swatch_3",
+                  "fill": "#80EED3",
+                  "width": "fill_container",
+                  "height": 78,
+                  "stroke": {
+                    "thickness": 0,
+                    "fill": "#D7D7D7"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "swatch_label_3",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "#80EED3",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sw_4",
+              "name": "Green",
+              "width": "fill_container",
+              "height": 122,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 18,
+                  "id": "swatch_4",
+                  "fill": "#00E3B5",
+                  "width": "fill_container",
+                  "height": 78,
+                  "stroke": {
+                    "thickness": 0,
+                    "fill": "#D7D7D7"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "swatch_label_4",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "#00E3B5",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sw_5",
+              "name": "Ink",
+              "width": "fill_container",
+              "height": 122,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 18,
+                  "id": "swatch_5",
+                  "fill": "#131313",
+                  "width": "fill_container",
+                  "height": 78,
+                  "stroke": {
+                    "thickness": 0,
+                    "fill": "#D7D7D7"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "swatch_label_5",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "#131313",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sw_6",
+              "name": "White",
+              "width": "fill_container",
+              "height": 122,
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 18,
+                  "id": "swatch_6",
+                  "fill": "#FFFFFF",
+                  "width": "fill_container",
+                  "height": 78,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#D7D7D7"
+                  }
+                },
+                {
+                  "type": "text",
+                  "id": "swatch_label_6",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "#FFFFFF",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "component_board",
+          "name": "Reusable Components",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "cmp_btn",
+              "name": "Component/Button CTA",
+              "reusable": true,
+              "fill": "$ref-ink",
+              "cornerRadius": 999,
+              "padding": [
+                14,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cmp_btn_label",
+                  "fill": "$ref-white",
+                  "content": "START QUEST",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "800"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_chip",
+              "name": "Component/Outline Category Pill",
+              "reusable": true,
+              "fill": "$ref-white",
+              "cornerRadius": 999,
+              "stroke": {
+                "thickness": 1,
+                "fill": "$ref-ink"
+              },
+              "padding": [
+                8,
+                20
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cmp_chip_label",
+                  "fill": "$ref-ink",
+                  "content": "Open-world",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 18
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_nav",
+              "name": "Component/Reference Navigation",
+              "reusable": true,
+              "fill": "#00000000",
+              "gap": 46,
+              "padding": [
+                18,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "nav_explore",
+                  "fill": "$ref-ink",
+                  "content": "Explore",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 18
+                },
+                {
+                  "type": "text",
+                  "id": "nav_learn",
+                  "fill": "$ref-ink",
+                  "content": "Learn",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 18
+                },
+                {
+                  "type": "text",
+                  "id": "nav_shop",
+                  "fill": "$ref-green",
+                  "content": "Shop",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "nav_jobs",
+                  "fill": "$ref-ink",
+                  "content": "Jobs",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 18
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_browser",
+              "name": "Component/Browser Chrome Shell",
+              "reusable": true,
+              "width": 720,
+              "fill": "$ref-white",
+              "cornerRadius": 22,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#13131322",
+                "offset": {
+                  "x": 0,
+                  "y": 16
+                },
+                "blur": 44
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "browser_bar",
+                  "name": "Browser Chrome Bar",
+                  "width": "fill_container",
+                  "fill": "#F2F2F2",
+                  "gap": 10,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "dot_red",
+                      "fill": "#FF5F57",
+                      "width": 12,
+                      "height": 12
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "dot_yellow",
+                      "fill": "#FFBD2E",
+                      "width": 12,
+                      "height": 12
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "dot_green",
+                      "fill": "#28C840",
+                      "width": 12,
+                      "height": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "url_bar",
+                      "name": "URL Bar",
+                      "width": "fill_container",
+                      "height": 28,
+                      "fill": "$ref-white",
+                      "cornerRadius": 7,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "url_text",
+                          "fill": "#777777",
+                          "content": "pixelartstation.com",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "browser_slot",
+                  "name": "Browser Content Slot",
+                  "slot": [],
+                  "width": "fill_container",
+                  "height": 360,
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 135,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#F4EBA7",
+                        "position": 0
+                      },
+                      {
+                        "color": "#FFFFFF",
+                        "position": 0.55
+                      },
+                      {
+                        "color": "#80EED3",
+                        "position": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_blob",
+              "name": "Component/Stepped Soft Blob Panel",
+              "reusable": true,
+              "width": 560,
+              "height": 340,
+              "fill": "#00000000",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 28,
+                  "id": "blob_main",
+                  "x": 0,
+                  "y": 0,
+                  "fill": "$ref-white",
+                  "width": 480,
+                  "height": 300
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 20,
+                  "id": "blob_left",
+                  "x": 0,
+                  "y": 64,
+                  "fill": "$ref-white",
+                  "width": 78,
+                  "height": 184
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 20,
+                  "id": "blob_right",
+                  "x": 398,
+                  "y": 110,
+                  "fill": "$ref-white",
+                  "width": 162,
+                  "height": 126
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 20,
+                  "id": "blob_bottom",
+                  "x": 168,
+                  "y": 260,
+                  "fill": "$ref-white",
+                  "width": 96,
+                  "height": 80
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_product",
+              "name": "Component/Product Monster Card",
+              "reusable": true,
+              "width": 260,
+              "height": 410,
+              "fill": "$ref-cream",
+              "cornerRadius": 20,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 16,
+                  "id": "product_image",
+                  "x": 20,
+                  "y": 20,
+                  "fill": "#EAF0FF",
+                  "width": 220,
+                  "height": 210
+                },
+                {
+                  "type": "text",
+                  "id": "product_name",
+                  "x": 24,
+                  "y": 28,
+                  "fill": "$ref-ink",
+                  "content": "Gyarados",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 44
+                },
+                {
+                  "type": "text",
+                  "id": "product_price",
+                  "x": 20,
+                  "y": 238,
+                  "rotation": 90,
+                  "fill": "$ref-ink",
+                  "content": "$40",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 26,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "product_title",
+                  "x": 34,
+                  "y": 270,
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": 210,
+                  "content": "Unleash your pixel passion",
+                  "lineHeight": 1.1,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 32
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_compact",
+              "name": "Component/Compact Guess Card",
+              "reusable": true,
+              "width": 190,
+              "height": 260,
+              "fill": "#FCE9DD",
+              "cornerRadius": 18,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "compact_label",
+                  "x": 18,
+                  "y": 22,
+                  "fill": "$ref-ink",
+                  "content": "WIN\nREWARDS",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "compact_title",
+                  "x": 18,
+                  "y": 100,
+                  "fill": "$ref-ink",
+                  "content": "Guess\nwho?",
+                  "lineHeight": 1.05,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 48
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 10,
+                  "id": "compact_sprite",
+                  "x": 70,
+                  "y": 178,
+                  "fill": "$ref-blue",
+                  "width": 78,
+                  "height": 62,
+                  "stroke": {
+                    "thickness": 3,
+                    "fill": "$ref-ink"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_intro",
+              "name": "Component/Intro Text Card",
+              "reusable": true,
+              "width": 330,
+              "fill": "$ref-white",
+              "cornerRadius": 20,
+              "layout": "vertical",
+              "gap": 22,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "intro_copy_1",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Welcome to our pixel paradise!\nDive into an immersive collection of captivating games, where classic meets modern in a pixelated wonderland.",
+                  "lineHeight": 1.24,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 21
+                },
+                {
+                  "type": "text",
+                  "id": "intro_copy_2",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Get ready to lose yourself in the world of pixel gaming perfection.   ›",
+                  "lineHeight": 1.24,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 21
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cmp_luma",
+              "name": "Component/Luma Embed Panel",
+              "reusable": true,
+              "width": 420,
+              "height": 300,
+              "fill": "$ref-white",
+              "cornerRadius": 20,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#D7D7D7"
+              },
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 28,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "luma_icon",
+                  "fill": "$ref-yellow",
+                  "content": "⚡",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 42,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "luma_title",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Luma embed goes here",
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 24,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "luma_body",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Replace this placeholder with the real event iframe.",
+                  "lineHeight": 1.3,
+                  "textAlign": "center",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 15
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "composition",
+          "name": "Reference Composition from PNG",
+          "width": "fill_container",
+          "fill": "$ref-white",
+          "cornerRadius": 28,
+          "gap": 20,
+          "padding": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "comp_left",
+              "name": "Left Composition",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "id": "nav_instance",
+                  "type": "ref",
+                  "ref": "cmp_nav"
+                },
+                {
+                  "type": "frame",
+                  "id": "comp_main_row",
+                  "name": "Main Cards",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "id": "product_instance",
+                      "type": "ref",
+                      "ref": "cmp_product",
+                      "width": "fill_container"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "comp_stack",
+                      "name": "Stack Cards",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 20,
+                      "children": [
+                        {
+                          "id": "small_product",
+                          "type": "ref",
+                          "ref": "cmp_product",
+                          "height": 250,
+                          "width": "fill_container",
+                          "descendants": {
+                            "product_name": {
+                              "content": "Raichu",
+                              "fontSize": 36
+                            },
+                            "product_price": {
+                              "content": "$12",
+                              "fontSize": 22
+                            },
+                            "product_title": {
+                              "enabled": false
+                            }
+                          }
+                        },
+                        {
+                          "id": "compact_instance",
+                          "type": "ref",
+                          "ref": "cmp_compact",
+                          "width": "fill_container"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "comp_chips",
+                  "name": "Chips",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "id": "pill_0",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Game"
+                        }
+                      }
+                    },
+                    {
+                      "id": "pill_1",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Open-world"
+                        }
+                      }
+                    },
+                    {
+                      "id": "pill_2",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Explore"
+                        }
+                      }
+                    },
+                    {
+                      "id": "pill_3",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Sale"
+                        }
+                      }
+                    },
+                    {
+                      "id": "pill_4",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Collection"
+                        }
+                      }
+                    },
+                    {
+                      "id": "pill_5",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Pokemon"
+                        }
+                      }
+                    },
+                    {
+                      "id": "pill_6",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Gaming"
+                        }
+                      }
+                    },
+                    {
+                      "id": "pill_7",
+                      "type": "ref",
+                      "ref": "cmp_chip",
+                      "descendants": {
+                        "cmp_chip_label": {
+                          "content": "Pixel"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "comp_right",
+              "name": "Right Composition",
+              "width": 330,
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "id": "intro_instance",
+                  "type": "ref",
+                  "ref": "cmp_intro",
+                  "width": "fill_container"
+                },
+                {
+                  "id": "charizard_like",
+                  "type": "ref",
+                  "ref": "cmp_product",
+                  "width": "fill_container",
+                  "height": 360,
+                  "fill": "$ref-white",
+                  "descendants": {
+                    "product_image": {
+                      "fill": "#FFE8D8"
+                    },
+                    "product_name": {
+                      "content": "Charizard",
+                      "fontSize": 48
+                    },
+                    "product_price": {
+                      "content": "$80"
+                    },
+                    "product_title": {
+                      "enabled": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "handoff",
+          "name": "ULWmon Handoff Notes",
+          "width": "fill_container",
+          "fill": "$ref-white",
+          "cornerRadius": 24,
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "handoff_title",
+              "fill": "$ref-ink",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Use these as the design source for the landing page",
+              "fontFamily": "$font-sans",
+              "fontSize": 32
+            },
+            {
+              "type": "text",
+              "id": "handoff_body",
+              "fill": "#555555",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Keep the soft white blob cards, pastel gradient background, large airy sans-serif headlines, pixel-font labels, browser chrome framing, outline chips, and right-column info card structure. Replace monster imagery with original/parody ULWmon assets when available.",
+              "lineHeight": 1.4,
+              "fontFamily": "$font-sans",
+              "fontSize": 18
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hAGmS",
+          "name": "Typography Reference — Press Start 2P",
+          "width": "fill_container",
+          "fill": "$ref-white",
+          "cornerRadius": 24,
+          "gap": 64,
+          "padding": 36,
+          "children": [
+            {
+              "type": "frame",
+              "id": "nIThB",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XFf4L",
+                  "fill": "$ref-ink",
+                  "content": "Typography",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 42
+                },
+                {
+                  "type": "text",
+                  "id": "t9XeTN",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Press Start 2P",
+                  "lineHeight": 1.4,
+                  "fontFamily": "$font-pixel",
+                  "fontSize": 28
+                },
+                {
+                  "type": "text",
+                  "id": "GwF9X",
+                  "fill": "#555555",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Aa Bb Cc Dd Ee Ff Gg Hh Ii\nJj Kk Ll Mm Nn Oo Pp Qq Rr\nSs Tt Uu Vv Ww Xx Yy Zz",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-pixel",
+                  "fontSize": 12
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "u1KSs",
+              "width": "fill_container",
+              "fill": "#00000000",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bIGeQ",
+                  "fill": "$ref-ink",
+                  "content": "Usage",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 42
+                },
+                {
+                  "type": "text",
+                  "id": "gmPas",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "NAV SELECTED ITEM",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-pixel",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "Y0yVKY",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "PRICE / STATS",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-pixel",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "QvZ4y",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "TINY BATTLE LABELS",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-pixel",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "q07qb",
+                  "fill": "$ref-ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "RETRO CTA LABELS",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-pixel",
+                  "fontSize": 13
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "ref-blue": {
+      "type": "color",
+      "value": "#5FDBFD"
+    },
+    "ref-cream": {
+      "type": "color",
+      "value": "#F4EBA7"
+    },
+    "ref-yellow": {
+      "type": "color",
+      "value": "#F9C62C"
+    },
+    "ref-mint": {
+      "type": "color",
+      "value": "#80EED3"
+    },
+    "ref-green": {
+      "type": "color",
+      "value": "#00E3B5"
+    },
+    "ref-ink": {
+      "type": "color",
+      "value": "#131313"
+    },
+    "ref-white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "ref-soft": {
+      "type": "color",
+      "value": "#F6F6F6"
+    },
+    "font-sans": {
+      "type": "string",
+      "value": "IBM Plex Sans KR"
+    },
+    "font-pixel": {
+      "type": "string",
+      "value": "Press Start 2P"
+    }
+  }
+}
