@@ -110,6 +110,7 @@ h1 span { color: var(--cyan); }
 .how-section, .register-band { padding: 72px 14%; }
 .how-section { background: #111; color: #fff; }
 .how-section h2, .register-band h2 { margin: 0 0 24px; font-size: clamp(2.5rem, 4vw, 4.8rem); font-style: italic; }
+.how-copy { max-width: 980px; margin: -8px 0 28px; color: rgba(255,255,255,.78); font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.75; }
 .how-section ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
 .how-section li { padding: 24px; background: #222; border-top: 5px solid var(--cyan); } .how-section b { display: block; font-size: 1.7rem; margin-bottom: 10px; }
 .register-band { display: grid; grid-template-columns: .9fr 1fr; gap: 32px; align-items: center; background: linear-gradient(135deg, #fff, #eaffff); }
