@@ -3395,10 +3395,10 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
     position: relative;
     z-index: 5;
     width: 100vw;
-    padding: 16px 28px 24px;
-    margin-top: -1px;
-    overflow: hidden;
-    background: #fff;
+    padding: 12px 28px 0;
+    margin-top: 8px;
+    overflow: visible;
+    background: transparent;
   }
 
   .mobile-harness-callout p {
