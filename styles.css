@@ -3586,13 +3586,13 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
 /* Mobile hero compaction: keep only a small breathing gap below the callout. */
 @media (max-width: 900px) {
   .tcg-hero {
-    min-height: calc(75vw + 130px) !important;
+    min-height: calc(75vw + 105px) !important;
   }
 }
 
 @media (max-width: 480px) {
   .tcg-hero {
-    min-height: 430px !important;
+    min-height: 406px !important;
   }
 }
 
