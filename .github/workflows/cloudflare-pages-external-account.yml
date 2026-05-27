@@ -1,0 +1,78 @@
+name: Deploy to External Cloudflare Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: "Cloudflare Pages project name in the destination account. Falls back to vars.EXTERNAL_CLOUDFLARE_PAGES_PROJECT or pokemondev-com."
+        required: false
+        type: string
+      pages_branch:
+        description: "Cloudflare Pages branch name to deploy. Use main for production if the destination project production branch is main."
+        required: false
+        default: main
+        type: string
+
+concurrency:
+  group: cloudflare-pages-external-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.EXTERNAL_CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.EXTERNAL_CLOUDFLARE_API_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate destination Cloudflare credentials
+        run: |
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo "Missing secret EXTERNAL_CLOUDFLARE_ACCOUNT_ID" >&2; exit 1; }
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo "Missing secret EXTERNAL_CLOUDFLARE_API_TOKEN" >&2; exit 1; }
+
+      - name: Prepare static artifact
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f script.js
+          rm -rf dist
+          mkdir -p dist
+          cp index.html styles.css script.js dist/
+          cp -R assets dist/assets
+
+      - name: Resolve destination project
+        id: destination
+        env:
+          INPUT_PROJECT_NAME: ${{ inputs.project_name }}
+          VAR_PROJECT_NAME: ${{ vars.EXTERNAL_CLOUDFLARE_PAGES_PROJECT }}
+          INPUT_PAGES_BRANCH: ${{ inputs.pages_branch }}
+        run: |
+          project_name="$INPUT_PROJECT_NAME"
+          if [ -z "$project_name" ]; then
+            project_name="$VAR_PROJECT_NAME"
+          fi
+          if [ -z "$project_name" ]; then
+            project_name="pokemondev-com"
+          fi
+
+          pages_branch="$INPUT_PAGES_BRANCH"
+          if [ -z "$pages_branch" ]; then
+            pages_branch="main"
+          fi
+
+          echo "project_name=$project_name" >> "$GITHUB_OUTPUT"
+          echo "pages_branch=$pages_branch" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to destination Cloudflare Pages account
+        run: |
+          npx wrangler@latest pages deploy dist \
+            --project-name="${{ steps.destination.outputs.project_name }}" \
+            --branch="${{ steps.destination.outputs.pages_branch }}" \
+            --commit-dirty=true
