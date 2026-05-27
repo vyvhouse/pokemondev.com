@@ -3358,3 +3358,83 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
     bottom: 344px !important;
   }
 }
+
+/* Remove event catchphrase and lift the summon dialog near the header. */
+.event-catchphrase {
+  display: none !important;
+}
+
+@media (min-width: 901px) {
+  .battle-dialog {
+    top: 108px !important;
+    bottom: auto !important;
+    left: 4.8% !important;
+    z-index: 12 !important;
+  }
+  .player-harness-status {
+    bottom: 458px !important;
+    z-index: 10 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1350px) {
+  .battle-dialog {
+    top: 106px !important;
+    bottom: auto !important;
+  }
+}
+
+.mobile-harness-callout {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-harness-callout {
+    display: block;
+    position: relative;
+    z-index: 5;
+    width: 100vw;
+    padding: 16px 28px 24px;
+    margin-top: -1px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .mobile-harness-callout p {
+    position: relative;
+    margin: 0 auto;
+    width: min(100%, 318px);
+    min-height: 104px;
+    padding: 24px 24px 22px;
+    border: 4px solid #202020;
+    border-radius: 3px;
+    background: #f8f8f8;
+    color: #202020;
+    box-shadow:
+      0 0 0 4px #f8f8f8,
+      0 0 0 8px #202020,
+      inset 0 0 0 3px #d9d9d9;
+    font-family: var(--font-sans);
+    font-size: .9rem;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.75;
+    word-break: keep-all;
+  }
+
+  .mobile-harness-callout p::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 2px solid #202020;
+    pointer-events: none;
+  }
+
+  .mobile-harness-callout span {
+    position: absolute;
+    right: 24px;
+    bottom: 13px;
+    font-size: .55rem;
+    animation: cursor-blink 1s steps(2,end) infinite;
+  }
+}
