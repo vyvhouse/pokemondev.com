@@ -26,3 +26,19 @@ if (!reduceMotion) {
     });
   }
 }
+
+for (const video of document.querySelectorAll('video')) {
+  if (!video.autoplay) continue;
+
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+
+  const startVideo = () => video.play().catch(() => {});
+
+  video.addEventListener('canplay', startVideo, { once: true });
+  video.addEventListener('error', () => {
+    video.setAttribute('aria-label', `${video.getAttribute('aria-label') || '영상'} 파일을 불러오지 못했습니다`);
+  });
+  startVideo();
+}

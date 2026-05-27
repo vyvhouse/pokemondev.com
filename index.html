@@ -17,15 +17,13 @@
   <body>
     <header class="tcg-nav" aria-label="상단 내비게이션">
       <a class="tcg-logo" href="#top" aria-label="ULWmon 홈">
-        <span>ULW</span>
+        <span>ULWmon</span>
         <small>TRADING HACKATHON</small>
       </a>
       <nav>
         <a href="#proof">VIDEO PROOF</a>
         <a href="#news">MEME CARDS</a>
-        <a href="#live">EVENT FLOW</a>
         <a href="#how">HOW TO PLAY</a>
-        <a href="#cards">LOOT</a>
         <a href="#register">WHERE TO JOIN</a>
       </nav>
     </header>
@@ -49,7 +47,13 @@
           <div class="hp-row"><b>HP:</b><i style="--hp: 24%"></i></div>
         </div>
         <div class="battle-sprite player-sprite" aria-hidden="true"></div>
-        <div class="battle-status player-status" aria-hidden="true">
+        <div class="battle-status player-status enemy-harness-status" aria-hidden="true">
+          <strong>POKEMON</strong>
+          <span>:L6</span>
+          <div class="hp-row"><b>HP:</b><i style="--hp: 72%"></i></div>
+          <em>16 / 22</em>
+        </div>
+        <div class="battle-status player-harness-status" aria-hidden="true">
           <strong>HARNESS</strong>
           <span>:L6</span>
           <div class="hp-row"><b>HP:</b><i style="--hp: 86%"></i></div>
@@ -57,14 +61,12 @@
         </div>
 
         <div class="hero-content">
-          <p class="mega-label">WILD AGENT APPEARED!</p>
-          <h1 id="hero-title">ULWmon:<br /><span>Chaos Routing</span></h1>
           <div class="battle-dialog" role="note">
             <p class="battle-shout">Go! HARNESS!</p>
           </div>
           <div class="battle-menu" aria-label="배틀 커맨드">
             <a class="selected" href="#proof">FIGHT</a>
-            <a href="#cards">DEX</a>
+            <a href="#news">DEX</a>
             <a href="#how">BAG</a>
             <a href="#register">JOIN</a>
           </div>
@@ -74,7 +76,7 @@
           <div class="video-frame gameboy-frame">
             <div class="video-topbar"><span>ROUTE_01 / mgba</span><b>REC</b></div>
             <div class="video-screen gameboy-screen">
-              <video class="hero-video" controls playsinline preload="metadata" aria-label="AI 포켓몬 플레이 영상"></video>
+              <video class="hero-video" src="assets/video/gba-route.mov" autoplay muted loop playsinline preload="auto" aria-label="GBA 안 AI 포켓몬 플레이 영상"></video>
               <div class="video-pixel-scene" aria-hidden="true">
                 <span class="pixel-player"></span>
                 <span class="pixel-path path-one"></span>
@@ -82,9 +84,16 @@
                 <span class="pixel-grass grass-one"></span>
                 <span class="pixel-grass grass-two"></span>
               </div>
-              <button class="play-chip" type="button" aria-label="영상 재생 placeholder">▶</button>
             </div>
-            <div class="video-caption-row"><strong>LV.06 AGENT</strong><span>HP ▮▮▮▯▯</span></div>
+          </div>
+        </aside>
+
+        <aside class="player-run-video-shell" aria-label="왼쪽 아래 하네스 배틀 영상">
+          <div class="player-run-video-frame">
+            <div class="video-topbar"><span>HARNESS_VIEW / battle</span><b>REC</b></div>
+            <div class="player-run-screen">
+              <video class="hero-video" src="assets/video/player-battle.mov" autoplay muted loop playsinline preload="auto" aria-label="왼쪽 아래 배틀 커맨드 영상"></video>
+            </div>
           </div>
         </aside>
 
@@ -109,7 +118,7 @@
           <div class="news-cards">
           <article class="news-card tcg-card pokedex-card holo-card" data-tilt-card>
             <div class="type-strip"><span>NORMAL / BUG</span><b>ex</b></div>
-            <div class="news-art yellow-art"><div class="trainer-bust"></div><div class="small-card card-a"></div></div>
+            <div class="news-art yellow-art card-video-art"><video class="news-card-video" src="assets/video/news-card.mov" autoplay muted loop playsinline preload="metadata" aria-label="Wall Bump ex 카드 영상"></video></div>
             <div class="news-body">
               <h3>Wall Bump ex</h3>
               <p class="move-line">Move · Bump Into Wall / Retry Loop</p>
@@ -119,46 +128,17 @@
           </article>
           <article class="news-card tcg-card pokedex-card" data-tilt-card>
             <div class="type-strip psychic"><span>PSY</span><b>no.404</b></div>
-            <div class="news-art pink-art"><div class="floating-card"></div></div>
+            <div class="news-art pink-art card-video-art"><video class="news-card-video" src="assets/video/news-card-right.mov" autoplay muted loop playsinline preload="metadata" aria-label="Context Window Confusion 카드 영상"></video></div>
             <div class="news-body">
               <h3>Context Window Confusion</h3>
               <p class="move-line">Move · Forget Objective / Hallucinate Route</p>
               <p class="flavor-line">초록마을? 그게 뭐였죠?</p>
-              <a class="black-button" href="#cards">Open Dex <span>›</span></a>
+              <a class="black-button" href="#how">Open Dex <span>›</span></a>
             </div>
           </article>
           </div>
         </div>
         <div class="carousel-dots" aria-hidden="true"><span class="active"></span><span></span><span></span></div>
-      </section>
-
-      <section class="live-band" id="live" aria-labelledby="live-title">
-        <div class="live-copy">
-          <h2 id="live-title">EVENT FLOW</h2>
-          <p>영상으로 가능성을 보고, 밈 카드로 실패를 웃고, 현장에서 pss-mgba 하네스를 직접 뜯어 초록마을 런을 시도합니다.</p>
-          <a class="tcg-button light" href="#register">Join Run <span>›</span></a>
-        </div>
-        <div class="route-map" aria-hidden="true">
-          <div class="route-node start">LAB</div>
-          <div class="route-path main"></div>
-          <div class="route-node grass">GRASS</div>
-          <div class="route-path turn"></div>
-          <div class="route-node goal">VIRIDIAN</div>
-          <div class="route-trainer"></div>
-        </div>
-      </section>
-
-      <section class="gallery-section" id="cards" aria-labelledby="cards-title">
-        <div class="section-title-row">
-          <h2 id="cards-title">CARD GALLERY</h2>
-          <a href="https://github.com/minpeter/pss-mgba" target="_blank" rel="noreferrer">pss-mgba <span>›</span></a>
-        </div>
-        <div class="gallery-grid">
-          <article class="info-card holo-card" data-tilt-card><span>MISSION</span><h3>초록마을 도달</h3><p>에이전트가 자율적으로 목적지까지 가면 승리.</p></article>
-          <article class="info-card" data-tilt-card><span>TRAINER</span><h3>하네스 조련</h3><p>관찰, 입력, 메모리, 세이브 상태를 한 덱으로 묶습니다.</p></article>
-          <article class="info-card holo-card" data-tilt-card><span>ENERGY</span><h3>디버깅 PTSD</h3><p>길막과 대화창과 hallucination을 공격 카드로 전환.</p></article>
-          <article class="info-card" data-tilt-card><span>RARE</span><h3>포켓몬 깨는 AI</h3><p>운이 좋으면 진짜로 무언가가 플레이합니다.</p></article>
-        </div>
       </section>
 
       <section class="how-section" id="how" aria-labelledby="how-title">
