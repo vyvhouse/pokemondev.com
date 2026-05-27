@@ -3813,3 +3813,21 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   .mobile-harness-callout { padding-bottom: 16px; }
   .tcg-hero { min-height: 422px !important; }
 }
+
+.section-copy,
+.trainer-note p,
+.move-line,
+.flavor-line,
+.join-summary,
+.register-band p,
+.command-list span {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.news-body h3,
+.trainer-note strong {
+  overflow-wrap: normal;
+}
+.hashed-logo-mark {
+  overflow-wrap: anywhere;
+}
