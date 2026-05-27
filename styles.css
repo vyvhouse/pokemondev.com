@@ -3548,3 +3548,14 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   .move-line { font-size: .86rem; }
   .flavor-line { font-size: .82rem; }
 }
+
+.hero-caption,
+.hero-arrow {
+  display: none !important;
+}
+
+.battle-menu:has(a:hover) a.selected:not(:hover)::before,
+.battle-menu:has(a:focus-visible) a.selected:not(:focus-visible)::before {
+  content: none !important;
+  animation: none !important;
+}
