@@ -3129,3 +3129,114 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
     line-height: 1.25 !important;
   }
 }
+
+/* Desktop-only battle tension pass: keep layout geometry intact, but use
+   opposing light/shadow directions, speed lines, and impact glows to make the
+   two video panels read as rivals facing off. */
+@media (min-width: 901px) {
+  .tcg-hero::before,
+  .tcg-hero::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .tcg-hero::before {
+    inset: 84px 0 0;
+    background:
+      linear-gradient(112deg, transparent 0 39%, rgba(255,75,181,.24) 44%, rgba(255,255,255,.08) 47%, rgba(95,219,253,.26) 50%, transparent 56% 100%),
+      radial-gradient(ellipse at 24% 73%, rgba(255,75,181,.30), transparent 0 23%, transparent 38%),
+      radial-gradient(ellipse at 78% 38%, rgba(95,219,253,.34), transparent 0 24%, transparent 40%);
+    mix-blend-mode: screen;
+  }
+
+  .tcg-hero::after {
+    left: 50%;
+    top: 126px;
+    width: 2px;
+    height: 640px;
+    transform: rotate(18deg);
+    transform-origin: top center;
+    background: linear-gradient(180deg, transparent, rgba(255,255,255,.9) 18%, rgba(249,198,44,.9) 50%, rgba(255,75,181,.8) 78%, transparent);
+    box-shadow: 0 0 18px rgba(255,255,255,.72), 0 0 36px rgba(95,219,253,.48), 0 0 64px rgba(255,75,181,.38);
+    opacity: .78;
+  }
+
+  .hero-video-shell,
+  .player-run-video-shell {
+    isolation: isolate;
+  }
+
+  .hero-video-shell {
+    filter: drop-shadow(-26px 30px 0 rgba(255,75,181,.22)) drop-shadow(-46px 46px 42px rgba(0,0,0,.72));
+  }
+
+  .player-run-video-shell {
+    filter: drop-shadow(26px -14px 0 rgba(95,219,253,.22)) drop-shadow(42px 38px 34px rgba(0,0,0,.68));
+  }
+
+  .hero-video-shell::before,
+  .player-run-video-shell::before {
+    content: "";
+    position: absolute;
+    inset: -28px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: .9;
+    filter: blur(.2px);
+  }
+
+  .hero-video-shell::before {
+    background:
+      linear-gradient(242deg, transparent 0 31%, rgba(255,255,255,.62) 32%, transparent 34% 44%, rgba(95,219,253,.38) 45%, transparent 47% 100%),
+      radial-gradient(ellipse at 18% 56%, rgba(95,219,253,.40), transparent 57%);
+    clip-path: polygon(0 0, 100% 18%, 100% 100%, 14% 84%);
+  }
+
+  .player-run-video-shell::before {
+    background:
+      linear-gradient(62deg, transparent 0 30%, rgba(255,255,255,.58) 31%, transparent 33% 43%, rgba(255,75,181,.42) 44%, transparent 46% 100%),
+      radial-gradient(ellipse at 82% 44%, rgba(255,75,181,.42), transparent 56%);
+    clip-path: polygon(0 0, 88% 16%, 100% 100%, 0 82%);
+  }
+
+  .gameboy-frame {
+    box-shadow:
+      -14px 14px 0 rgba(95,219,253,.20),
+      -30px 34px 0 rgba(255,75,181,.16),
+      0 30px 70px rgba(0,0,0,.72),
+      inset 0 0 0 3px rgba(255,255,255,.18) !important;
+  }
+
+  .player-run-video-frame {
+    box-shadow:
+      14px -12px 0 rgba(255,75,181,.20),
+      28px -22px 0 rgba(95,219,253,.15),
+      30px 32px 54px rgba(0,0,0,.70),
+      inset 0 0 0 6px #fff7ff,
+      inset 0 0 0 12px #1a1018 !important;
+  }
+
+  .gameboy-screen::after,
+  .player-run-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+
+  .gameboy-screen::after {
+    background:
+      linear-gradient(238deg, transparent 0 41%, rgba(255,255,255,.45) 42%, transparent 44% 100%),
+      radial-gradient(circle at 10% 74%, rgba(255,75,181,.40), transparent 28%);
+  }
+
+  .player-run-screen::before {
+    background:
+      linear-gradient(58deg, transparent 0 40%, rgba(255,255,255,.42) 41%, transparent 43% 100%),
+      radial-gradient(circle at 90% 24%, rgba(95,219,253,.42), transparent 28%);
+  }
+}
