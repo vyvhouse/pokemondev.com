@@ -3783,3 +3783,33 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
     gap: 8px;
   }
 }
+
+/* Header polish: center the mobile logo and center the hackathon ribbon text. */
+.tcg-logo small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  line-height: 1.05;
+}
+
+@media (max-width: 900px) {
+  .tcg-nav {
+    justify-content: center;
+    padding-inline: 14px;
+  }
+  .tcg-logo {
+    margin-inline: auto;
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile-harness-callout { padding-bottom: 18px; }
+  .tcg-hero { min-height: calc(75vw + 123px) !important; }
+}
+@media (max-width: 480px) {
+  .mobile-harness-callout { padding-bottom: 16px; }
+  .tcg-hero { min-height: 422px !important; }
+}
