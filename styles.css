@@ -3559,3 +3559,19 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   content: none !important;
   animation: none !important;
 }
+
+@media (max-width: 900px) {
+  .news-layout,
+  .news-cards,
+  .trainer-note,
+  .news-card {
+    width: min(342px, calc(100vw - 48px));
+    max-width: min(342px, calc(100vw - 48px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .news-cards {
+    justify-items: center;
+  }
+}
