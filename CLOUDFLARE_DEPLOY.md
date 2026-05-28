@@ -22,9 +22,9 @@ This repository is a static site: `index.html`, `styles.css`, `script.js`, and `
 
 ## Deployment behavior
 
-- `main` push deploys production.
-- Pull requests create Cloudflare Pages preview deployments using the PR branch name.
-- `workflow_dispatch` allows manual deploys.
+- Production deploys are manual only via `workflow_dispatch`.
+- `main` pushes and pull requests do not automatically deploy.
+- Use the GitHub Actions “Deploy to Cloudflare Pages” workflow when a pokemondev.com deployment is intentionally needed.
 
 ## Domain switch later
 
