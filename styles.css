@@ -3832,15 +3832,22 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   overflow-wrap: anywhere;
 }
 
-/* Language switcher */
+/* Language switcher: fixed overlay so it never participates in the
+   header/nav layout or shifts the existing page composition. */
 .language-switcher {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 100;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 5px;
-  border: 2px solid rgba(255,255,255,.35);
+  border: 2px solid #111;
   border-radius: 999px;
-  background: rgba(255,255,255,.08);
+  background: rgba(5,5,5,.88);
+  box-shadow: 0 8px 20px rgba(0,0,0,.24);
+  backdrop-filter: blur(6px);
 }
 .language-switcher button {
   min-width: 38px;
@@ -3865,11 +3872,21 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
 }
 
 @media (max-width: 900px) {
-  .tcg-nav { gap: 10px; }
-  .language-switcher { margin-left: auto; padding: 4px; gap: 4px; }
+  .language-switcher { right: 12px; bottom: 12px; padding: 4px; gap: 4px; }
   .language-switcher button { min-width: 32px; height: 28px; font-size: .42rem; }
 }
 
 @media (max-width: 480px) {
+  .language-switcher { right: 10px; bottom: 10px; }
   .language-switcher button { min-width: 29px; height: 26px; font-size: .37rem; }
+}
+
+/* Mobile visual fix: center the floating language control in the visual viewport
+   so inherited wide hero artwork cannot clip it at the right edge. */
+@media (max-width: 900px) {
+  .language-switcher {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
 }
