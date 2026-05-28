@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="ULWmon — AI가 포켓몬 레드를 플레이해 초록마을까지 갈 수 있는지 실험하는 에이전트 하네스 밈-해커톤." />
-    <meta property="og:title" content="ULWmon : AI가 포켓몬을 깰 수 있을까?" />
-    <meta property="og:description" content="포켓몬 레드에서 초록마을까지. 에이전트 하네스를 깎고 AI가 정신 나가는 걸 같이 봅니다." />
+    <meta name="description" data-i18n-content="meta.description" content="ULWmon — AI가 포켓몬 레드를 플레이해 초록마을까지 갈 수 있는지 실험하는 에이전트 하네스 밈-해커톤." />
+    <meta property="og:title" data-i18n-content="meta.title" content="ULWmon : AI가 포켓몬을 깰 수 있을까?" />
+    <meta property="og:description" data-i18n-content="meta.ogDescription" content="포켓몬 레드에서 초록마을까지. 에이전트 하네스를 깎고 AI가 정신 나가는 걸 같이 봅니다." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pokemondev.com/" />
     <meta property="og:image" content="https://pokemondev.com/assets/og-image.jpg" />
@@ -13,28 +13,33 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ULWmon : AI가 포켓몬을 깰 수 있을까?" />
-    <meta name="twitter:description" content="포켓몬 레드에서 초록마을까지. 에이전트 하네스를 깎고 AI가 정신 나가는 걸 같이 봅니다." />
+    <meta name="twitter:title" data-i18n-content="meta.title" content="ULWmon : AI가 포켓몬을 깰 수 있을까?" />
+    <meta name="twitter:description" data-i18n-content="meta.ogDescription" content="포켓몬 레드에서 초록마을까지. 에이전트 하네스를 깎고 AI가 정신 나가는 걸 같이 봅니다." />
     <meta name="twitter:image" content="https://pokemondev.com/assets/og-image.jpg" />
     <meta name="theme-color" content="#050505" />
-    <title>ULWmon : AI가 포켓몬을 깰 수 있을까?</title>
+    <title data-i18n="meta.title">ULWmon : AI가 포켓몬을 깰 수 있을까?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="tcg-nav" aria-label="상단 내비게이션">
-      <a class="tcg-logo" href="#top" aria-label="ULWmon 홈">
+    <header class="tcg-nav" data-i18n-aria-label="nav.aria" aria-label="상단 내비게이션">
+      <a class="tcg-logo" href="#top" data-i18n-aria-label="nav.homeAria" aria-label="ULWmon 홈">
         <span>ULWmon</span>
-        <small>HARNESS HACKATHON</small>
+        <small data-i18n="brand.tagline">HARNESS HACKATHON</small>
       </a>
       <nav>
-        <a href="#proof">EVENT</a>
-        <a href="#news">POKEMON RALPH</a>
-        <a href="#how">HOW TO PLAY</a>
-        <a href="#register">WHERE TO JOIN</a>
+        <a href="#proof" data-i18n="nav.event">EVENT</a>
+        <a href="#news" data-i18n="nav.ralph">POKEMON RALPH</a>
+        <a href="#how" data-i18n="nav.how">HOW TO PLAY</a>
+        <a href="#register" data-i18n="nav.join">WHERE TO JOIN</a>
       </nav>
+      <div class="language-switcher" role="group" data-i18n-aria-label="language.aria" aria-label="언어 선택">
+        <button type="button" data-lang="ko" aria-pressed="true">KO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="ja" aria-pressed="false">JA</button>
+      </div>
     </header>
 
     <main id="top">
@@ -67,21 +72,21 @@
 
         <div class="hero-content">
           <div class="battle-dialog" role="note">
-            <p class="battle-shout">Go! HARNESS!</p>
+            <p class="battle-shout" data-i18n="hero.shout">Go! HARNESS!</p>
           </div>
-          <div class="battle-menu" aria-label="배틀 커맨드">
-            <a class="selected" href="#proof">FIGHT</a>
-            <a href="#news">DEX</a>
-            <a href="#how">BAG</a>
-            <a href="#register">JOIN</a>
+          <div class="battle-menu" data-i18n-aria-label="hero.menuAria" aria-label="배틀 커맨드">
+            <a class="selected" href="#proof" data-i18n="hero.menu.fight">FIGHT</a>
+            <a href="#news" data-i18n="hero.menu.dex">DEX</a>
+            <a href="#how" data-i18n="hero.menu.bag">BAG</a>
+            <a href="#register" data-i18n="hero.menu.join">JOIN</a>
           </div>
         </div>
 
-        <aside class="hero-video-shell holo-card" id="proof" data-tilt-card aria-label="AI 포켓몬 플레이 영상">
+        <aside class="hero-video-shell holo-card" id="proof" data-tilt-card data-i18n-aria-label="hero.videoAria" aria-label="AI 포켓몬 플레이 영상">
           <div class="video-frame gameboy-frame">
             <div class="video-topbar"><span>ROUTE_01 / mgba</span><b>REC</b></div>
             <div class="video-screen gameboy-screen">
-              <video class="hero-video" src="assets/video/gba-route.mov" autoplay muted loop playsinline preload="metadata" aria-label="GBA 안 AI 포켓몬 플레이 영상"></video>
+              <video class="hero-video" src="assets/video/gba-route.mov" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="hero.videoGbaAria" aria-label="GBA 안 AI 포켓몬 플레이 영상"></video>
               <div class="video-pixel-scene" aria-hidden="true">
                 <span class="pixel-player"></span>
                 <span class="pixel-path path-one"></span>
@@ -91,16 +96,16 @@
               </div>
             </div>
           </div>
-          <section class="mobile-harness-callout" aria-label="AI 하네스 안내">
-            <p>AI 하네스로 포켓몬을 정복하세요!<span aria-hidden="true">▼</span></p>
+          <section class="mobile-harness-callout" data-i18n-aria-label="hero.mobileCalloutAria" aria-label="AI 하네스 안내">
+            <p><span data-i18n="hero.mobileCallout">AI 하네스로 포켓몬을 정복하세요!</span><span aria-hidden="true">▼</span></p>
           </section>
         </aside>
 
-        <aside class="player-run-video-shell" aria-label="왼쪽 아래 하네스 배틀 영상">
+        <aside class="player-run-video-shell" data-i18n-aria-label="hero.playerVideoAria" aria-label="왼쪽 아래 하네스 배틀 영상">
           <div class="player-run-video-frame">
             <div class="video-topbar"><span>HARNESS_VIEW / battle</span><b>REC</b></div>
             <div class="player-run-screen">
-              <video class="hero-video" src="assets/video/player-battle.mov" autoplay muted loop playsinline preload="metadata" aria-label="왼쪽 아래 배틀 커맨드 영상"></video>
+              <video class="hero-video" src="assets/video/player-battle.mov" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="hero.playerVideoLabel" aria-label="왼쪽 아래 배틀 커맨드 영상"></video>
             </div>
           </div>
         </aside>
@@ -110,35 +115,35 @@
       <section class="news-section" id="news" aria-labelledby="news-title">
         <div class="section-title-row">
           <div>
-            <p class="section-kicker">TRAINER WARNING</p>
-            <h2 id="news-title">POKEMON RALPH</h2>
-            <p class="section-copy">두 영상은 같은 문제의 전후입니다. 그냥 맡기면 벽에 박고 길을 잃지만, 하네스를 붙이면 관찰·리트라이·목표 회복 루프로 다시 진행합니다.</p>
+            <p class="section-kicker" data-i18n="news.kicker">TRAINER WARNING</p>
+            <h2 id="news-title" data-i18n="news.title">POKEMON RALPH</h2>
+            <p class="section-copy" data-i18n="news.copy">두 영상은 같은 문제의 전후입니다. 그냥 맡기면 벽에 박고 길을 잃지만, 하네스를 붙이면 관찰·리트라이·목표 회복 루프로 다시 진행합니다.</p>
           </div>
-          <a href="#register">Join the run <span>›</span></a>
+          <a href="#register"><span data-i18n="news.cta">Join the run</span> <span>›</span></a>
         </div>
         <div class="news-layout">
           <aside class="trainer-note">
             <span>PROF. DEBUG</span>
-            <strong>Naive Agent vs Harnessed Agent</strong>
-            <p>이 섹션은 “AI가 똑똑한가?”보다 “실패한 AI를 다시 목표로 돌려보낼 장치가 있는가?”를 보여줍니다.</p>
+            <strong data-i18n="news.noteTitle">Naive Agent vs Harnessed Agent</strong>
+            <p data-i18n="news.noteBody">이 섹션은 “AI가 똑똑한가?”보다 “실패한 AI를 다시 목표로 돌려보낼 장치가 있는가?”를 보여줍니다.</p>
           </aside>
           <div class="news-cards">
           <article class="news-card tcg-card pokedex-card holo-card" data-tilt-card>
             <div class="type-strip"><span>NORMAL / BUG</span><b>ex</b></div>
-            <div class="news-art yellow-art card-video-art"><video class="news-card-video" src="assets/video/news-card.mov" autoplay muted loop playsinline preload="metadata" aria-label="Naive Wall Loop 카드 영상"></video></div>
+            <div class="news-art yellow-art card-video-art"><video class="news-card-video" src="assets/video/news-card.mov" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="news.cardLeftVideoAria" aria-label="Naive Wall Loop 카드 영상"></video></div>
             <div class="news-body">
-              <h3>Naive Wall Loop</h3>
-              <p class="move-line">왜 실패하나 · 화면만 보면 같은 벽 앞에서 루프가 납니다.</p>
-              <p class="flavor-line">Naive agent는 현재 위치와 다음 목표를 안정적으로 기억하지 못합니다.</p>
+              <h3 data-i18n="news.cardLeftTitle">Naive Wall Loop</h3>
+              <p class="move-line" data-i18n="news.cardLeftMove">왜 실패하나 · 화면만 보면 같은 벽 앞에서 루프가 납니다.</p>
+              <p class="flavor-line" data-i18n="news.cardLeftFlavor">Naive agent는 현재 위치와 다음 목표를 안정적으로 기억하지 못합니다.</p>
             </div>
           </article>
           <article class="news-card tcg-card pokedex-card" data-tilt-card>
             <div class="type-strip psychic"><span>PSY</span><b>no.404</b></div>
-            <div class="news-art pink-art card-video-art"><video class="news-card-video" src="assets/video/news-card-right.mov" autoplay muted loop playsinline preload="metadata" aria-label="Harness Recovery 카드 영상"></video></div>
+            <div class="news-art pink-art card-video-art"><video class="news-card-video" src="assets/video/news-card-right.mov" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="news.cardRightVideoAria" aria-label="Harness Recovery 카드 영상"></video></div>
             <div class="news-body">
-              <h3>Harness Recovery</h3>
-              <p class="move-line">어떻게 회복하나 · 관찰, 리트라이, 목표 체크를 묶어 다시 진행시킵니다.</p>
-              <p class="flavor-line">실행 로그와 상태 복구 루프가 다음 시도를 더 똑똑하게 만듭니다.</p>
+              <h3 data-i18n="news.cardRightTitle">Harness Recovery</h3>
+              <p class="move-line" data-i18n="news.cardRightMove">어떻게 회복하나 · 관찰, 리트라이, 목표 체크를 묶어 다시 진행시킵니다.</p>
+              <p class="flavor-line" data-i18n="news.cardRightFlavor">실행 로그와 상태 복구 루프가 다음 시도를 더 똑똑하게 만듭니다.</p>
             </div>
           </article>
           </div>
@@ -147,38 +152,38 @@
       </section>
 
       <section class="how-section" id="how" aria-labelledby="how-title">
-        <h2 id="how-title">BATTLE COMMANDS</h2>
-        <p class="how-copy">참여자는 포켓몬 트레이너처럼 입장해, AI가 헤매는 장면을 관찰하고, 하네스 명령을 하나씩 붙여가며 초록마을까지 보내는 실험을 함께 진행합니다.</p>
+        <h2 id="how-title" data-i18n="how.title">BATTLE COMMANDS</h2>
+        <p class="how-copy" data-i18n="how.copy">참여자는 포켓몬 트레이너처럼 입장해, AI가 헤매는 장면을 관찰하고, 하네스 명령을 하나씩 붙여가며 초록마을까지 보내는 실험을 함께 진행합니다.</p>
         <ol class="command-list">
-          <li><b>FIGHT</b><span>현장에서 문제를 고릅니다. AI가 벽에 박거나 길을 잃는 실패 장면을 보고, 오늘 해결할 배틀 목표를 정합니다.</span></li>
-          <li><b>DEX</b><span>실패 패턴을 도감처럼 기록합니다. 화면 관찰, 버튼 입력, 위치 기억, 목표 유지 중 어디가 깨지는지 팀과 공유합니다.</span></li>
-          <li><b>BAG</b><span>하네스 아이템을 꺼냅니다. save state, memory, retry, goal check를 조합해 에이전트가 다시 시도할 장치를 붙입니다.</span></li>
-          <li><b>RUN</b><span>수정한 하네스로 재도전합니다. 진행 로그와 웃긴 장면을 같이 보며 다음 루프를 돌리고, 마지막에는 결과를 공유합니다.</span></li>
+          <li><b data-i18n="how.step.fight.label">FIGHT</b><span data-i18n="how.step.fight.body">현장에서 문제를 고릅니다. AI가 벽에 박거나 길을 잃는 실패 장면을 보고, 오늘 해결할 배틀 목표를 정합니다.</span></li>
+          <li><b data-i18n="how.step.dex.label">DEX</b><span data-i18n="how.step.dex.body">실패 패턴을 도감처럼 기록합니다. 화면 관찰, 버튼 입력, 위치 기억, 목표 유지 중 어디가 깨지는지 팀과 공유합니다.</span></li>
+          <li><b data-i18n="how.step.bag.label">BAG</b><span data-i18n="how.step.bag.body">하네스 아이템을 꺼냅니다. save state, memory, retry, goal check를 조합해 에이전트가 다시 시도할 장치를 붙입니다.</span></li>
+          <li><b data-i18n="how.step.run.label">RUN</b><span data-i18n="how.step.run.body">수정한 하네스로 재도전합니다. 진행 로그와 웃긴 장면을 같이 보며 다음 루프를 돌리고, 마지막에는 결과를 공유합니다.</span></li>
         </ol>
       </section>
 
       <section class="register-band" id="register" aria-labelledby="register-title">
         <div>
-          <h2 id="register-title">WHERE TO JOIN</h2>
-          <p>6월 6일 토요일 · 11:00–15:00 · 청담동. 등록은 호스트 승인 후 확정됩니다.</p>
+          <h2 id="register-title" data-i18n="register.title">WHERE TO JOIN</h2>
+          <p data-i18n="register.copy">6월 6일 토요일 · 11:00–15:00 · 청담동. 등록은 호스트 승인 후 확정됩니다.</p>
         </div>
         <div class="luma-panel event-card-panel">
-          <article class="join-card tcg-card" data-tilt-card aria-label="ULWmon 해커톤 참가 안내 카드">
+          <article class="join-card tcg-card" data-tilt-card data-i18n-aria-label="register.cardAria" aria-label="ULWmon 해커톤 참가 안내 카드">
             <div class="type-strip"><span>EVENT / HARNESS</span><b>ticket</b></div>
             <div class="join-card-body">
-              <p class="join-kicker">TRAINER PASS</p>
-              <h3>Harness Hackathon</h3>
-              <p class="join-summary">AI가 포켓몬 레드를 플레이하도록 관찰, 입력, save-state, retry 루프를 한 덱으로 조립합니다.</p>
+              <p class="join-kicker" data-i18n="register.kicker">TRAINER PASS</p>
+              <h3 data-i18n="register.cardTitle">Harness Hackathon</h3>
+              <p class="join-summary" data-i18n="register.summary">AI가 포켓몬 레드를 플레이하도록 관찰, 입력, save-state, retry 루프를 한 덱으로 조립합니다.</p>
               <dl class="event-facts">
-                <div><dt>DATE</dt><dd>6월 6일 토요일</dd></div>
-                <div><dt>TIME</dt><dd>11:00–15:00</dd></div>
-                <div><dt>PLACE</dt><dd>청담동</dd></div>
-                <div><dt>STATUS</dt><dd>호스트 승인 후 확정</dd></div>
+                <div><dt data-i18n="register.fact.dateLabel">DATE</dt><dd data-i18n="register.fact.date">6월 6일 토요일</dd></div>
+                <div><dt data-i18n="register.fact.timeLabel">TIME</dt><dd data-i18n="register.fact.time">11:00–15:00</dd></div>
+                <div><dt data-i18n="register.fact.placeLabel">PLACE</dt><dd data-i18n="register.fact.place">청담동</dd></div>
+                <div><dt data-i18n="register.fact.statusLabel">STATUS</dt><dd data-i18n="register.fact.status">호스트 승인 후 확정</dd></div>
               </dl>
-              <a class="black-button join-card-cta" href="https://luma.com/izrwu9dk" target="_blank" rel="noreferrer">Request Pass <span>›</span></a>
+              <a class="black-button join-card-cta" href="https://luma.com/izrwu9dk" target="_blank" rel="noreferrer"><span data-i18n="register.cta">Request Pass</span> <span>›</span></a>
             </div>
             <div class="hashed-sponsor" aria-label="Hosted by Hashed">
-              <span>BACKED BY</span>
+              <span data-i18n="sponsor.backedBy">BACKED BY</span>
               <img class="hashed-logo-mark" src="assets/hashed-logo.png" alt="Hashed" width="320" height="81" />
             </div>
           </article>
@@ -188,11 +193,11 @@
 
     <footer class="tcg-footer">
       <div class="footer-backed">
-        <span>BACKED BY</span>
+        <span data-i18n="sponsor.backedBy">BACKED BY</span>
         <img class="hashed-logo-mark" src="assets/hashed-logo.png" alt="Hashed" width="240" height="61" />
       </div>
       <address class="footer-contact">
-        <span>CONTACT</span>
+        <span data-i18n="footer.contact">CONTACT</span>
         <a href="mailto:hello@pokemondev.com">hello@pokemondev.com</a>
       </address>
     </footer>
