@@ -3680,7 +3680,7 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
 }
 .hashed-logo-mark {
   display: block;
-  width: min(320px, 48vw);
+  width: min(213px, 32vw);
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -3766,7 +3766,7 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   overflow-wrap: anywhere;
 }
 .tcg-footer .hashed-logo-mark {
-  width: min(240px, 42vw);
+  width: min(160px, 28vw);
 }
 @media (max-width: 700px) {
   .tcg-footer {
