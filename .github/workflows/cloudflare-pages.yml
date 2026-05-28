@@ -35,6 +35,9 @@ jobs:
           CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
           CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
         run: |
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo "Missing secret CLOUDFLARE_ACCOUNT_ID" >&2; exit 1; }
+          test -n "$CLOUDFLARE_EMAIL" || { echo "Missing secret CLOUDFLARE_EMAIL" >&2; exit 1; }
+          test -n "$CLOUDFLARE_API_KEY" || { echo "Missing secret CLOUDFLARE_API_KEY" >&2; exit 1; }
           npx wrangler@latest pages deploy dist \
             --project-name="${{ vars.CLOUDFLARE_PAGES_PROJECT || 'pokemondev-com' }}" \
             --branch="${{ github.head_ref || github.ref_name }}" \

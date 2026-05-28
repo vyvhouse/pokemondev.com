@@ -27,9 +27,10 @@ if (!reduceMotion) {
   }
 }
 
-for (const video of document.querySelectorAll('video')) {
-  if (!video.autoplay) continue;
+const videos = document.querySelectorAll('video[autoplay]');
+const canLazyStart = 'IntersectionObserver' in window;
 
+function prepareVideo(video) {
   video.muted = true;
   video.loop = true;
   video.playsInline = true;
@@ -40,5 +41,22 @@ for (const video of document.querySelectorAll('video')) {
   video.addEventListener('error', () => {
     video.setAttribute('aria-label', `${video.getAttribute('aria-label') || '영상'} 파일을 불러오지 못했습니다`);
   });
-  startVideo();
+
+  return startVideo;
+}
+
+if (canLazyStart) {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      const video = entry.target;
+      observer.unobserve(video);
+      const startVideo = prepareVideo(video);
+      startVideo();
+    }
+  }, { rootMargin: '220px 0px' });
+
+  for (const video of videos) observer.observe(video);
+} else {
+  for (const video of videos) prepareVideo(video)();
 }

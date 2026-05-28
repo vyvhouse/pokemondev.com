@@ -9,22 +9,39 @@ This repository is a static site: `index.html`, `styles.css`, `script.js`, and `
    - Build output directory: `dist` if using Cloudflare Git integration directly; GitHub Actions already creates `dist/`.
    - Production branch: `main`
 
-2. Create a Cloudflare API token with these permissions:
-   - Account → Cloudflare Pages → Edit
-   - Account → Account Settings → Read
-
-3. Add GitHub repository secrets:
-   - `CLOUDFLARE_API_TOKEN`
+2. Configure GitHub repository secrets for the primary workflow:
    - `CLOUDFLARE_ACCOUNT_ID`
+   - `CLOUDFLARE_EMAIL`
+   - `CLOUDFLARE_API_KEY`
 
-4. Optional GitHub repository variable:
+3. Optional GitHub repository variable:
    - `CLOUDFLARE_PAGES_PROJECT=pokemondev-com`
+
+For the external-account workflow, use a scoped Cloudflare API token:
+
+- `EXTERNAL_CLOUDFLARE_API_TOKEN`
+- `EXTERNAL_CLOUDFLARE_ACCOUNT_ID`
+- Optional variable: `EXTERNAL_CLOUDFLARE_PAGES_PROJECT`
+
+The external token needs these permissions:
+
+- Account → Cloudflare Pages → Edit
+- Account → Account Settings → Read
 
 ## Deployment behavior
 
 - Production deploys are manual only via `workflow_dispatch`.
 - `main` pushes and pull requests do not automatically deploy.
 - Use the GitHub Actions “Deploy to Cloudflare Pages” workflow when a pokemondev.com deployment is intentionally needed.
+
+## Social preview image
+
+`assets/og-image.jpg` is copied into `dist/assets/` and referenced from `index.html` as:
+
+- `og:image=https://pokemondev.com/assets/og-image.jpg`
+- `twitter:image=https://pokemondev.com/assets/og-image.jpg`
+
+Keep it at the standard Open Graph size `1200x630`.
 
 ## Domain switch later
 
