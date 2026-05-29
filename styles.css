@@ -3969,3 +3969,43 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   .expansion-section { padding: 48px 16px; }
   .fix-slider label { align-items: flex-start; flex-direction: column; }
 }
+
+/* Hero media QA pass: prevent the new CTA panel and battle plates from
+   covering the gameplay screens on mid-size desktop screenshots. */
+@media (min-width: 901px) and (max-width: 1350px) {
+  .hero-cta-panel {
+    display: none !important;
+  }
+  .enemy-harness-status {
+    right: auto !important;
+    left: 47.5% !important;
+    top: 82px !important;
+    transform: scale(.64) !important;
+    transform-origin: left top !important;
+  }
+  .enemy-harness-status::after {
+    left: auto !important;
+    right: -44px !important;
+    border-right: 0 !important;
+    border-left: 44px solid #21171f !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .enemy-harness-status {
+    left: 45.5% !important;
+    transform: scale(.58) !important;
+  }
+}
+
+/* Second QA correction: keep enemy HP plate in the empty battle field between
+   the left dialog and right GBA frame at 1280px screenshots. */
+@media (min-width: 901px) and (max-width: 1350px) {
+  .enemy-harness-status {
+    left: 39% !important;
+    right: auto !important;
+    top: 88px !important;
+    transform: scale(.58) !important;
+    transform-origin: left top !important;
+  }
+}
