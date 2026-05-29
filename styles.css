@@ -4260,3 +4260,190 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     max-width: 520px !important;
   }
 }
+
+/* Webview hero composition pass: reduce top-nav density and make the first
+   screen read as two intentional groups — copy/CTA on the left, GBA HUD on the
+   right. This final override preserves upstream wide-viewport fixes while
+   improving 901-1440px webview layouts. */
+@media (min-width: 901px) and (max-width: 1440px) {
+  .tcg-nav {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 28px;
+  }
+  .tcg-logo { width: 132px; }
+  .tcg-logo span { font-size: 1.55rem; }
+  .tcg-logo small { font-size: .4rem; }
+  .tcg-nav nav {
+    justify-content: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .tcg-nav nav a {
+    padding: 8px 10px;
+    font-size: .5rem;
+    letter-spacing: -.02em;
+    border-width: 2px;
+    box-shadow: 3px 3px 0 #111;
+    background: rgba(255, 248, 223, .92);
+  }
+  .tcg-nav nav a:nth-child(2),
+  .tcg-nav nav a:nth-child(4),
+  .tcg-nav nav a:nth-child(5),
+  .tcg-nav nav a:nth-child(6),
+  .tcg-nav nav a:nth-child(7) { display: none; }
+  .language-switcher { justify-self: end; gap: 6px; }
+  .language-switcher button {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0 8px;
+    font-size: .58rem;
+  }
+
+  .tcg-hero {
+    min-height: 740px !important;
+    isolation: isolate;
+  }
+  .hero-content {
+    position: absolute;
+    z-index: 14;
+    left: 6%;
+    top: 126px;
+    width: min(470px, 36vw);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 16px;
+  }
+  .battle-dialog {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    order: 1;
+    width: 100% !important;
+    max-width: none;
+    padding: 18px 20px;
+    font-size: .62rem;
+    line-height: 1.72;
+  }
+  .hero-cta-panel {
+    display: block !important;
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    order: 2;
+    width: 100%;
+    margin: 0;
+    padding: 14px 16px;
+    box-shadow: 6px 6px 0 #111;
+  }
+  .hero-cta-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .hero-cta-actions .tcg-button {
+    min-width: 0;
+    width: 100%;
+    min-height: 42px;
+    padding-inline: 10px;
+    font-size: .47rem;
+  }
+  .hero-status-line {
+    margin-top: 10px;
+    font-size: .9rem;
+  }
+  .battle-menu {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    order: 3;
+    width: min(380px, 100%);
+    margin: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-width: 4px;
+    box-shadow: 6px 6px 0 #111;
+  }
+  .battle-menu a {
+    padding: 11px 8px 10px 22px;
+    font-size: .46rem;
+  }
+
+  .hero-video-shell {
+    z-index: 9;
+    top: 118px !important;
+    right: 5% !important;
+    width: min(560px, 43vw) !important;
+    transform: none !important;
+  }
+  .gameboy-frame {
+    box-shadow: 12px 16px 0 rgba(0,0,0,.35), 0 26px 55px rgba(0,0,0,.42);
+  }
+  .enemy-status,
+  .battle-sprite {
+    opacity: .28;
+    transform: scale(.72);
+  }
+  .battle-status::after { display: none !important; }
+  .enemy-harness-status,
+  .player-harness-status {
+    z-index: 13 !important;
+    right: auto !important;
+    transform-origin: left top !important;
+    transform: scale(.56) !important;
+    box-shadow: 5px 5px 0 rgba(0,0,0,.35);
+  }
+  .enemy-harness-status {
+    left: 52.8% !important;
+    top: 630px !important;
+  }
+  .player-harness-status {
+    left: 68.5% !important;
+    top: 630px !important;
+  }
+  .player-run-video-shell { display: none !important; }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .tcg-nav {
+    padding-inline: 18px;
+    gap: 12px;
+  }
+  .tcg-logo { width: 118px; }
+  .tcg-nav nav a {
+    padding-inline: 8px;
+    font-size: .45rem;
+  }
+  .tcg-hero { min-height: 780px !important; }
+  .hero-content {
+    left: 4.5%;
+    top: 118px;
+    width: min(420px, 39vw);
+  }
+  .hero-cta-actions,
+  .battle-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-video-shell {
+    right: 3.5% !important;
+    width: min(520px, 50vw) !important;
+  }
+  .enemy-harness-status {
+    left: 50.5% !important;
+    top: 548px !important;
+  }
+  .player-harness-status {
+    left: 68.5% !important;
+    top: 548px !important;
+  }
+  .player-run-video-shell { display: none !important; }
+}
