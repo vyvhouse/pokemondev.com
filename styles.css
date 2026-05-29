@@ -43,7 +43,7 @@ a { color: inherit; }
 }
 .language-switcher button {
   min-width: 38px;
-  min-height: 30px;
+  min-height: 34px;
   padding: 0 9px;
   border: 0;
   border-radius: 999px;
@@ -53,6 +53,8 @@ a { color: inherit; }
   font-size: .46rem;
   line-height: 1;
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 .language-switcher button:hover,
 .language-switcher button.is-active {
@@ -164,10 +166,10 @@ h1 span { color: var(--cyan); }
   .register-band { grid-template-columns: 1fr; padding-inline: 8%; }
 }
 @media (max-width: 900px) {
-  .tcg-nav { height: auto; min-height: 72px; padding: 10px 14px; gap: 10px; }
+  .tcg-nav { height: auto; min-height: 72px; padding: 10px 14px; gap: 10px; flex-wrap: wrap; }
   .tcg-nav nav { display: none; }
-  .language-switcher { margin-left: auto; }
-  .language-switcher button { min-width: 34px; min-height: 28px; padding-inline: 7px; }
+  .language-switcher { margin-left: auto; min-height: 48px; padding: 5px; gap: 5px; }
+  .language-switcher button { min-width: 44px; min-height: 44px; padding-inline: 9px; font-size: .48rem; }
   .tcg-logo { width: 92px; }
   .tcg-logo span { font-size: 1.45rem; }
   .tcg-hero { min-height: 950px; }

@@ -221,25 +221,63 @@ const supportedLanguages = Object.keys(translations);
 const languageButtons = document.querySelectorAll('[data-lang]');
 const cards = document.querySelectorAll('[data-tilt-card]');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const LANGUAGE_STORAGE_KEY = 'ulwmon-language';
 
 function getTranslation(lang, key) {
   return key.split('.').reduce((value, part) => value?.[part], translations[lang]);
 }
 
+function getSavedLanguage() {
+  try {
+    return window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  } catch (_) {
+    return null;
+  }
+}
+
+function saveLanguage(lang) {
+  try {
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+  } catch (_) {
+    // Storage can be unavailable in private/embedded browsers; language switching should still work.
+  }
+}
+
 function normalizeLanguage(lang) {
-  const base = (lang || '').toLowerCase().split('-')[0];
-  return supportedLanguages.includes(base) ? base : 'ko';
+  const value = String(lang || '').trim().toLowerCase();
+  if (!value) return null;
+
+  if (value.startsWith('ko')) return 'ko';
+  if (value.startsWith('ja') || value.startsWith('jp')) return 'ja';
+  if (value.startsWith('en')) return 'en';
+
+  const base = value.split(/[-_]/)[0];
+  return supportedLanguages.includes(base) ? base : null;
+}
+
+function getBrowserLanguage() {
+  const preferredLanguages = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language, navigator.userLanguage, navigator.browserLanguage];
+
+  for (const lang of preferredLanguages) {
+    const normalized = normalizeLanguage(lang);
+    if (normalized) return normalized;
+  }
+
+  return 'ko';
 }
 
 function getInitialLanguage() {
   const params = new URLSearchParams(window.location.search);
-  const requested = params.get('lang');
-  const saved = window.localStorage.getItem('ulwmon-language');
-  return normalizeLanguage(requested || saved || navigator.language);
+  const requested = normalizeLanguage(params.get('lang'));
+  const saved = normalizeLanguage(getSavedLanguage());
+
+  return requested || saved || getBrowserLanguage();
 }
 
-function applyLanguage(lang) {
-  const nextLang = normalizeLanguage(lang);
+function applyLanguage(lang, options = {}) {
+  const nextLang = normalizeLanguage(lang) || 'ko';
   document.documentElement.lang = nextLang;
   document.documentElement.dataset.language = nextLang;
 
@@ -265,11 +303,11 @@ function applyLanguage(lang) {
     button.setAttribute('aria-pressed', String(isActive));
   }
 
-  window.localStorage.setItem('ulwmon-language', nextLang);
+  if (options.persist) saveLanguage(nextLang);
 }
 
 for (const button of languageButtons) {
-  button.addEventListener('click', () => applyLanguage(button.dataset.lang));
+  button.addEventListener('click', () => applyLanguage(button.dataset.lang, { persist: true }));
 }
 
 applyLanguage(getInitialLanguage());

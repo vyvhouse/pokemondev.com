@@ -24,7 +24,15 @@ for lang in ("ko", "en", "ja"):
 for lang in ("ko", "en", "ja"):
     assert re.search(rf"\b{lang}:\s*{{", js), f"missing translations for {lang}"
 
-for token in ["applyLanguage", "localStorage", "document.documentElement.lang", "data-i18n"]:
+for token in [
+    "applyLanguage",
+    "localStorage",
+    "navigator.languages",
+    "getBrowserLanguage",
+    "document.documentElement.lang",
+    "data-i18n",
+    "persist: true",
+]:
     assert token in js, f"missing runtime token: {token}"
 
 print("i18n static checks passed")
