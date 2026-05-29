@@ -18,6 +18,7 @@ for attr in required_attrs:
     assert attr in html, f"missing i18n attribute: {attr}"
 
 assert 'class="language-switcher"' in html, "missing language switcher"
+assert '<span>PokemonDev</span>' in html, "missing PokemonDev logo text"
 for lang in ("ko", "en", "ja"):
     assert f'data-lang="{lang}"' in html, f"missing language button: {lang}"
 

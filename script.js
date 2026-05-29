@@ -9,7 +9,7 @@ const translations = {
     language: { aria: '언어 선택' },
     nav: {
       aria: '상단 내비게이션',
-      homeAria: 'ULWmon 홈',
+      homeAria: 'PokemonDev 홈',
       event: 'EVENT',
       ralph: 'POKEMON RALPH',
       how: 'HOW TO PLAY',
@@ -81,7 +81,7 @@ const translations = {
     language: { aria: 'Language selection' },
     nav: {
       aria: 'Top navigation',
-      homeAria: 'ULWmon home',
+      homeAria: 'PokemonDev home',
       event: 'EVENT',
       ralph: 'POKEMON RALPH',
       how: 'HOW TO PLAY',
@@ -153,7 +153,7 @@ const translations = {
     language: { aria: '言語選択' },
     nav: {
       aria: '上部ナビゲーション',
-      homeAria: 'ULWmon ホーム',
+      homeAria: 'PokemonDev ホーム',
       event: 'EVENT',
       ralph: 'POKEMON RALPH',
       how: 'HOW TO PLAY',
