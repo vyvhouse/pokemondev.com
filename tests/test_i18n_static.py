@@ -13,6 +13,7 @@ required_attrs = [
     'data-i18n="news.galleryTitle"',
     'data-i18n="fix.title"',
     'data-i18n="runStatus.title"',
+    'data-i18n="glitch.title"',
     'data-i18n="bag.title"',
     'data-i18n="how.step.fight.body"',
     'data-i18n="register.summary"',
@@ -28,6 +29,7 @@ assert 'data-wall-counter' in html, "missing wall counter"
 assert 'data-fix-slider' in html, "missing fix slider"
 assert 'id="run-status"' in html, "missing run-status section"
 assert 'id="bag"' in html, "missing the-bag section"
+assert 'id="glitch-lab"' in html, "missing glitch-lab section"
 assert 'aria-label="PokemonDev 해커톤 참가 안내 카드"' in html, "card aria should use PokemonDev"
 for lang in ("ko", "en", "ja"):
     assert f'data-lang="{lang}"' in html, f"missing language button: {lang}"
@@ -44,9 +46,14 @@ for token in [
     "bag:",
     "fix:",
     "wallCounterLabel",
+    "MissingNo Protocol",
+    "Oak parole violation",
+    "glitch:",
     "faq:",
     "initWallCounter",
     "initFixSlider",
+    "initGlitchLab",
+    "triggerGlitchMode",
     "applyLanguage",
     "localStorage",
     "navigator.languages",

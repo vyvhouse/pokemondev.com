@@ -7,7 +7,7 @@ const translations = {
     },
     brand: { tagline: 'HARNESS HACKATHON' },
     language: { aria: '언어 선택' },
-    nav: { aria: '상단 내비게이션', homeAria: 'PokemonDev 홈', event: 'EVENT', ralph: 'POKEMON RALPH', fix: 'THE FIX', status: 'RUN STATUS', bag: 'THE BAG', how: 'HOW TO PLAY', join: 'WHERE TO JOIN' },
+    nav: { aria: '상단 내비게이션', homeAria: 'PokemonDev 홈', event: 'EVENT', ralph: 'POKEMON RALPH', fix: 'THE FIX', status: 'RUN STATUS', glitch: 'GLITCH LAB', bag: 'THE BAG', how: 'HOW TO PLAY', join: 'WHERE TO JOIN' },
     hero: {
       shout: 'AI는 강하다. 하지만 벽은 더 강했다.',
       cta: { pass: 'Request Pass', watch: 'Watch the run' },
@@ -30,6 +30,10 @@ const translations = {
         menu: { title: 'Menu panic', body: '메뉴를 열고, 취소하고, 왜 열었는지 잊습니다.' },
         grass: { title: 'Grass fear', body: '풀숲을 프로덕션 장애처럼 대합니다.' },
         button: { title: 'Button mash', body: 'A 버튼을 더 누른다고 계획이 생기진 않습니다.' },
+        oak: { title: 'Oak parole violation', body: '오박사가 위험하다고 하자 메뉴를 19번 열며 반성합니다.' },
+        sign: { title: 'Signpost theology', body: '같은 표지판을 너무 오래 읽어서 종교가 생겼습니다.' },
+        potion: { title: 'Potion hoarding', body: '오지 않는 미래를 위해 상처약 하나를 끝까지 아낍니다.' },
+        missingno: { title: 'MissingNo alignment', body: '모델은 벽이 latent space의 지름길이라고 주장합니다.' },
       },
     },
     fix: {
@@ -42,11 +46,16 @@ const translations = {
       route: { lab: 'Starter selected', pallet: 'Door found', route01: 'Wall boss engaged', viridian: 'Target city' },
       leader: { wall: { label: 'Most wall bumps', value: 'Ralph baseline · 404' }, recovery: { label: 'Best recovery', value: 'Harness loop · save-state retry' }, clip: { label: 'Funniest clip', value: 'Menu panic into victory pose' } },
     },
+    glitch: {
+      kicker: 'GLITCH LAB', title: 'MissingNo Protocol', copy: '에이전트가 벽을 유효한 전략이라고 우기면, 말싸움 대신 저주를 계측합니다.', trigger: 'Rare candy 주입', toast: 'MISSINGNO PROTOCOL: RALPH가 4초 동안 합법적으로 맛이 갔습니다.',
+      log: { vision: 'vision_model: “저 회색 타일은 감정적으로 걸을 수 있어 보임”', action: 'action_policy: UP UP UP UP UP UP UP', memory: 'memory: 이전 벽 충돌 기록을 분위기상 삭제', harness: 'harness: checkpoint restored · shame preserved' },
+      patch: { wall: { title: '벽이 보스로 승격됨', body: 'HP, 페이즈, 법적으로 별개인 분노 게이지를 얻었습니다.' }, dex: { title: 'Failure Dex 해금', body: '모든 부끄러운 루프가 웃음 트랙 달린 학습 데이터가 됩니다.' }, candy: { title: '에이전트용 Rare Candy', body: '더 똑똑해진 게 아니라, 더 관측 가능하고 덜 가스라이팅됩니다.' } },
+    },
     bag: {
       kicker: 'THE BAG', title: 'Harness Items', copy: '에이전트를 wall enjoyer에서 route finisher로 바꾸기 위한 트레이너 장비입니다.', cta: 'Get starter kit',
-      pokedex: { title: 'Harness Pokédex', body: '관찰, memory, retry, 입력, scoring을 담은 compact cards.' },
+      pokedex: { title: 'Harness Pokédex', body: '관찰, memory, retry, input exorcism, scoring을 담은 저주 방지 카드.' },
       quest: { title: 'Quest Board', body: '루트 목표를 고르고, 실패 패턴을 맡고, 작은 fix를 ship합니다.' },
-      judge: { title: 'Judge Stats', body: '진행도, 견고함, 코미디, 설명 가능성이 모두 점수입니다.' },
+      judge: { title: 'Judge Stats', body: '진행도, 견고함, 코미디, 설명 가능성, 그리고 벽에게 지지 않는 태도가 모두 점수입니다.' },
       github: { title: 'GitHub Starter', body: 'Repo link는 이벤트에서 공개합니다. 지금은 trainer pass를 요청하세요.', cta: 'Request Pass' },
     },
     how: {
@@ -69,12 +78,13 @@ const translations = {
   en: {
     meta: { title: 'PokemonDev: Can AI beat Pokémon?', description: 'PokemonDev is an agent-harness meme hackathon testing whether AI can play Pokémon Red all the way to Viridian City.', ogDescription: 'From Pokémon Red to Viridian City. Build agent harnesses and watch AI lose its mind together.' },
     brand: { tagline: 'HARNESS HACKATHON' }, language: { aria: 'Language selection' },
-    nav: { aria: 'Top navigation', homeAria: 'PokemonDev home', event: 'EVENT', ralph: 'POKEMON RALPH', fix: 'THE FIX', status: 'RUN STATUS', bag: 'THE BAG', how: 'HOW TO PLAY', join: 'WHERE TO JOIN' },
+    nav: { aria: 'Top navigation', homeAria: 'PokemonDev home', event: 'EVENT', ralph: 'POKEMON RALPH', fix: 'THE FIX', status: 'RUN STATUS', glitch: 'GLITCH LAB', bag: 'THE BAG', how: 'HOW TO PLAY', join: 'WHERE TO JOIN' },
     hero: { shout: 'The model is smart. The wall is smarter.', cta: { pass: 'Request Pass', watch: 'Watch the run' }, status: { countdown: 'T-8 days · limited trainer slots', hashed: 'Hashed-backed agent harness sprint.' }, menuAria: 'Battle commands', menu: { fight: 'FIGHT', dex: 'DEX', bag: 'BAG', join: 'JOIN' }, videoAria: 'AI Pokémon gameplay video', videoGbaAria: 'AI Pokémon gameplay inside GBA', mobileCalloutAria: 'AI harness callout', mobileCallout: 'Conquer Pokémon with an AI harness!', playerVideoAria: 'Lower-left harness battle video', playerVideoLabel: 'Lower-left battle command video', videoError: 'Could not load the video file' },
-    news: { kicker: 'TRAINER WARNING', title: 'POKEMON RALPH', copy: 'These two clips show the before and after of the same problem. Left alone, the agent walks into walls and gets lost. With a harness, observation, retry, and goal-recovery loops get it moving again.', cta: 'Join the run', noteTitle: 'Naive Agent vs Harnessed Agent', noteBody: 'This section is less about “is AI smart?” and more about “do we have a mechanism that sends a failed AI back toward the goal?”', cardLeftVideoAria: 'Naive Wall Loop card video', cardLeftTitle: 'Naive Wall Loop', cardLeftMove: 'Why it fails · Screen-only control loops in front of the same wall.', cardLeftFlavor: 'The naive agent cannot reliably remember its current position or next objective.', cardRightVideoAria: 'Harness Recovery card video', cardRightTitle: 'Harness Recovery', cardRightMove: 'How it recovers · Observation, retry, and goal checks are bundled into a loop.', cardRightFlavor: 'Execution logs and state-recovery loops make the next attempt smarter.', galleryTitle: 'Failure Gallery', wallCounterLabel: 'Wall bump counter', failure: { wall: { title: 'Wall loop', body: 'Repeats the same step because the screen looks “almost right.”' }, menu: { title: 'Menu panic', body: 'Opens menus, cancels menus, then forgets why it opened them.' }, grass: { title: 'Grass fear', body: 'Treats tall grass like a production outage.' }, button: { title: 'Button mash', body: 'More A presses do not create a plan.' } } },
+    news: { kicker: 'TRAINER WARNING', title: 'POKEMON RALPH', copy: 'These two clips show the before and after of the same problem. Left alone, the agent walks into walls and gets lost. With a harness, observation, retry, and goal-recovery loops get it moving again.', cta: 'Join the run', noteTitle: 'Naive Agent vs Harnessed Agent', noteBody: 'This section is less about “is AI smart?” and more about “do we have a mechanism that sends a failed AI back toward the goal?”', cardLeftVideoAria: 'Naive Wall Loop card video', cardLeftTitle: 'Naive Wall Loop', cardLeftMove: 'Why it fails · Screen-only control loops in front of the same wall.', cardLeftFlavor: 'The naive agent cannot reliably remember its current position or next objective.', cardRightVideoAria: 'Harness Recovery card video', cardRightTitle: 'Harness Recovery', cardRightMove: 'How it recovers · Observation, retry, and goal checks are bundled into a loop.', cardRightFlavor: 'Execution logs and state-recovery loops make the next attempt smarter.', galleryTitle: 'Failure Gallery', wallCounterLabel: 'Wall bump counter', failure: { wall: { title: 'Wall loop', body: 'Repeats the same step because the screen looks “almost right.”' }, menu: { title: 'Menu panic', body: 'Opens menus, cancels menus, then forgets why it opened them.' }, grass: { title: 'Grass fear', body: 'Treats tall grass like a production outage.' }, button: { title: 'Button mash', body: 'More A presses do not create a plan.' }, oak: { title: 'Oak parole violation', body: 'Professor Oak says it is unsafe, so the agent opens the menu 19 times.' }, sign: { title: 'Signpost theology', body: 'Reads the same sign until it becomes a religion.' }, potion: { title: 'Potion hoarding', body: 'Saves one potion for a future that never arrives.' }, missingno: { title: 'MissingNo alignment', body: 'The model claims the wall is actually a shortcut in latent space.' } } },
     fix: { kicker: 'THE FIX', title: 'Before / After Harness', copy: 'Same route, different loop: memory, retry, and goal checks turn wall comedy into measurable progress.', beforeVideoAria: 'Before harness wall loop', afterVideoAria: 'After harness recovery', beforeLabel: 'BEFORE: wall loop', afterLabel: 'AFTER: recovery loop', sliderLabel: 'Harness mix', metric: { memory: { label: 'Memory', value: 'route + objective kept alive' }, retry: { label: 'Retry', value: 'failed states become next attempts' }, goal: { label: 'Goal check', value: 'Viridian stays on screen' } } },
     runStatus: { kicker: 'RUN STATUS', title: 'Route to Viridian', copy: 'A static scoreboard for the hackathon sprint: clear route checkpoints, funny failures, and recovery wins.', boardTitle: 'Static Leaderboard', route: { lab: 'Starter selected', pallet: 'Door found', route01: 'Wall boss engaged', viridian: 'Target city' }, leader: { wall: { label: 'Most wall bumps', value: 'Ralph baseline · 404' }, recovery: { label: 'Best recovery', value: 'Harness loop · save-state retry' }, clip: { label: 'Funniest clip', value: 'Menu panic into victory pose' } } },
-    bag: { kicker: 'THE BAG', title: 'Harness Items', copy: 'Everything a trainer needs to turn an agent from wall enjoyer into route finisher.', cta: 'Get starter kit', pokedex: { title: 'Harness Pokédex', body: 'Compact cards for observation, memory, retry, inputs, and scoring.' }, quest: { title: 'Quest Board', body: 'Pick a route objective, claim a failure pattern, ship a tiny fix.' }, judge: { title: 'Judge Stats', body: 'Progress, robustness, comedy, and explainability all count.' }, github: { title: 'GitHub Starter', body: 'Repo link drops at the event. For now, request a trainer pass.', cta: 'Request Pass' } },
+    glitch: { kicker: 'GLITCH LAB', title: 'MissingNo Protocol', copy: 'When the agent insists the wall is a valid strategy, we stop arguing and instrument the curse.', trigger: 'Inject rare candy', toast: 'MISSINGNO PROTOCOL: RALPH is legally unhinged for 4 seconds.', log: { vision: 'vision_model: “that gray tile looks emotionally walkable”', action: 'action_policy: UP UP UP UP UP UP UP', memory: 'memory: previous wall collision deleted for vibes', harness: 'harness: checkpoint restored · shame preserved' }, patch: { wall: { title: 'Wall is now a boss', body: 'It has HP, phases, and a legally distinct rage meter.' }, dex: { title: 'Failure Dex unlocked', body: 'Every embarrassing loop becomes training data with a laugh track.' }, candy: { title: 'Rare candy for agents', body: 'Not smarter, just more observable and harder to gaslight.' } } },
+    bag: { kicker: 'THE BAG', title: 'Harness Items', copy: 'Everything a trainer needs to turn an agent from wall enjoyer into route finisher.', cta: 'Get starter kit', pokedex: { title: 'Harness Pokédex', body: 'Anti-curse cards for observation, memory, retry, input exorcism, and scoring.' }, quest: { title: 'Quest Board', body: 'Pick a route objective, claim a failure pattern, ship a tiny fix.' }, judge: { title: 'Judge Stats', body: 'Progress, robustness, comedy, explainability, and refusing to lose to a wall all count.' }, github: { title: 'GitHub Starter', body: 'Repo link drops at the event. For now, request a trainer pass.', cta: 'Request Pass' } },
     how: { title: 'BATTLE COMMANDS', copy: 'Participants enter like Pokémon trainers, watch where the AI gets lost, then add harness commands one by one to help it reach Viridian City.', step: { fight: { label: 'FIGHT', body: 'Pick a problem on site. Watch the AI hit walls or lose its path, then choose today’s battle objective.' }, dex: { label: 'DEX', body: 'Log failure patterns like a Pokédex: screen observation, button input, position memory, and goal retention.' }, bag: { label: 'BAG', body: 'Pull out harness items. Combine save states, memory, retry, and goal checks so the agent can try again.' }, run: { label: 'RUN', body: 'Run the revised harness. Watch logs and funny moments together, loop again, then share the result.' } } },
     register: { title: 'WHERE TO JOIN', copy: 'Saturday, June 6 · 11:00–15:00 · Cheongdam-dong. Registration is confirmed after host approval.', cardAria: 'PokemonDev hackathon registration card', kicker: 'TRAINER PASS', cardTitle: 'Harness Hackathon', summary: 'Assemble observation, inputs, save states, and retry loops into one deck so AI can play Pokémon Red.', prep: { title: 'Slots & Prep', body: 'Limited trainer slots. Bring a laptop and a willingness to experiment. Emulator and harness starter notes are provided on site.' }, faq: { who: { q: 'Who can join?', a: 'If you like agents, games, hackathons, or memes, you are qualified.' }, code: { q: 'Do I need to be a strong coder?', a: 'No. Observation, prompts, tests, and clip logging all matter.' }, bring: { q: 'What should I bring?', a: 'A laptop, charger, and the ability to laugh when AI hits a wall.' } }, fact: { dateLabel: 'DATE', date: 'Saturday, June 6', timeLabel: 'TIME', time: '11:00–15:00', placeLabel: 'PLACE', place: 'Cheongdam-dong', statusLabel: 'STATUS', status: 'Confirmed after host approval' }, cta: 'Request Pass' },
     sponsor: { backedBy: 'BACKED BY' }, footer: { contact: 'CONTACT' },
@@ -82,12 +92,13 @@ const translations = {
   ja: {
     meta: { title: 'PokemonDev：AIはポケモンを攻略できるか？', description: 'PokemonDevは、AIがポケットモンスター 赤をプレイしてトキワシティまで進めるかを試すエージェント・ハーネス系ミームハッカソンです。', ogDescription: 'ポケモン赤からトキワシティまで。エージェントのハーネスを作りながら、AIが迷走する様子を一緒に見届けます。' },
     brand: { tagline: 'HARNESS HACKATHON' }, language: { aria: '言語選択' },
-    nav: { aria: '上部ナビゲーション', homeAria: 'PokemonDev ホーム', event: 'EVENT', ralph: 'POKEMON RALPH', fix: 'THE FIX', status: 'RUN STATUS', bag: 'THE BAG', how: 'HOW TO PLAY', join: 'WHERE TO JOIN' },
+    nav: { aria: '上部ナビゲーション', homeAria: 'PokemonDev ホーム', event: 'EVENT', ralph: 'POKEMON RALPH', fix: 'THE FIX', status: 'RUN STATUS', glitch: 'GLITCH LAB', bag: 'THE BAG', how: 'HOW TO PLAY', join: 'WHERE TO JOIN' },
     hero: { shout: 'AIは強い。でも壁はもっと強かった。', cta: { pass: 'Request Pass', watch: 'Watch the run' }, status: { countdown: 'T-8 days · limited trainer slots', hashed: 'Hashed-backed agent harness sprint.' }, menuAria: 'バトルコマンド', menu: { fight: 'FIGHT', dex: 'DEX', bag: 'BAG', join: 'JOIN' }, videoAria: 'AIのポケモンプレイ動画', videoGbaAria: 'GBA内のAIポケモンプレイ動画', mobileCalloutAria: 'AIハーネス案内', mobileCallout: 'AIハーネスでポケモンを攻略しよう！', playerVideoAria: '左下のハーネス・バトル動画', playerVideoLabel: '左下のバトルコマンド動画', videoError: '動画ファイルを読み込めませんでした' },
-    news: { kicker: 'TRAINER WARNING', title: 'POKEMON RALPH', copy: '2つの動画は、同じ問題のビフォー／アフターです。そのまま任せると壁にぶつかって迷いますが、ハーネスを付けると観察・リトライ・目標復帰ループで再び進みます。', cta: 'Join the run', noteTitle: 'Naive Agent vs Harnessed Agent', noteBody: 'このセクションでは「AIは賢いか？」よりも、「失敗したAIを再びゴールへ戻す仕組みがあるか？」を見せます。', cardLeftVideoAria: 'Naive Wall Loopカード動画', cardLeftTitle: 'Naive Wall Loop', cardLeftMove: 'なぜ失敗するか · 画面だけを見ると同じ壁の前でループします。', cardLeftFlavor: 'Naive agentは現在位置と次の目標を安定して記憶できません。', cardRightVideoAria: 'Harness Recoveryカード動画', cardRightTitle: 'Harness Recovery', cardRightMove: 'どう復帰するか · 観察、リトライ、目標チェックを束ねて再び進ませます。', cardRightFlavor: '実行ログと状態復帰ループが、次の試行をより賢くします。', galleryTitle: 'Failure Gallery', wallCounterLabel: 'Wall bump counter', failure: { wall: { title: 'Wall loop', body: '画面が「ほぼ正しい」ように見えて同じ一歩を繰り返します。' }, menu: { title: 'Menu panic', body: 'メニューを開き、キャンセルし、なぜ開いたか忘れます。' }, grass: { title: 'Grass fear', body: '草むらを本番障害のように扱います。' }, button: { title: 'Button mash', body: 'Aボタンを増やしても計画は生まれません。' } } },
+    news: { kicker: 'TRAINER WARNING', title: 'POKEMON RALPH', copy: '2つの動画は、同じ問題のビフォー／アフターです。そのまま任せると壁にぶつかって迷いますが、ハーネスを付けると観察・リトライ・目標復帰ループで再び進みます。', cta: 'Join the run', noteTitle: 'Naive Agent vs Harnessed Agent', noteBody: 'このセクションでは「AIは賢いか？」よりも、「失敗したAIを再びゴールへ戻す仕組みがあるか？」を見せます。', cardLeftVideoAria: 'Naive Wall Loopカード動画', cardLeftTitle: 'Naive Wall Loop', cardLeftMove: 'なぜ失敗するか · 画面だけを見ると同じ壁の前でループします。', cardLeftFlavor: 'Naive agentは現在位置と次の目標を安定して記憶できません。', cardRightVideoAria: 'Harness Recoveryカード動画', cardRightTitle: 'Harness Recovery', cardRightMove: 'どう復帰するか · 観察、リトライ、目標チェックを束ねて再び進ませます。', cardRightFlavor: '実行ログと状態復帰ループが、次の試行をより賢くします。', galleryTitle: 'Failure Gallery', wallCounterLabel: 'Wall bump counter', failure: { wall: { title: 'Wall loop', body: '画面が「ほぼ正しい」ように見えて同じ一歩を繰り返します。' }, menu: { title: 'Menu panic', body: 'メニューを開き、キャンセルし、なぜ開いたか忘れます。' }, grass: { title: 'Grass fear', body: '草むらを本番障害のように扱います。' }, button: { title: 'Button mash', body: 'Aボタンを増やしても計画は生まれません。' }, oak: { title: 'Oak parole violation', body: 'オーキド博士に止められ、メニューを19回開いて反省します。' }, sign: { title: 'Signpost theology', body: '同じ看板を読みすぎて宗教になります。' }, potion: { title: 'Potion hoarding', body: '来ない未来のためにキズぐすりを最後まで温存します。' }, missingno: { title: 'MissingNo alignment', body: 'モデルは壁をlatent spaceの近道だと主張します。' } } },
     fix: { kicker: 'THE FIX', title: 'Before / After Harness', copy: '同じルート、違うループ。memory、retry、goal checkが壁コメディを測定できる前進に変えます。', beforeVideoAria: 'ハーネス前の壁ループ動画', afterVideoAria: 'ハーネス後の復帰動画', beforeLabel: 'BEFORE: wall loop', afterLabel: 'AFTER: recovery loop', sliderLabel: 'Harness mix', metric: { memory: { label: 'Memory', value: 'route + objective kept alive' }, retry: { label: 'Retry', value: 'failed states become next attempts' }, goal: { label: 'Goal check', value: 'Viridian stays on screen' } } },
     runStatus: { kicker: 'RUN STATUS', title: 'Route to Viridian', copy: 'ハッカソン用の静的スコアボード。ルート、面白い失敗、復帰成功を追います。', boardTitle: 'Static Leaderboard', route: { lab: 'Starter selected', pallet: 'Door found', route01: 'Wall boss engaged', viridian: 'Target city' }, leader: { wall: { label: 'Most wall bumps', value: 'Ralph baseline · 404' }, recovery: { label: 'Best recovery', value: 'Harness loop · save-state retry' }, clip: { label: 'Funniest clip', value: 'Menu panic into victory pose' } } },
-    bag: { kicker: 'THE BAG', title: 'Harness Items', copy: 'エージェントをwall enjoyerからroute finisherへ変えるためのトレーナー装備です。', cta: 'Get starter kit', pokedex: { title: 'Harness Pokédex', body: '観察、memory、retry、入力、scoringのコンパクトカード。' }, quest: { title: 'Quest Board', body: 'ルート目標を選び、失敗パターンを担当し、小さなfixをshipします。' }, judge: { title: 'Judge Stats', body: '進捗、堅牢性、コメディ、説明可能性がすべてスコアです。' }, github: { title: 'GitHub Starter', body: 'Repo linkはイベントで共有します。まずはtrainer passを申請してください。', cta: 'Request Pass' } },
+    glitch: { kicker: 'GLITCH LAB', title: 'MissingNo Protocol', copy: 'エージェントが壁を有効な戦略だと言い張るなら、議論せず呪いを計測します。', trigger: 'Rare candy注入', toast: 'MISSINGNO PROTOCOL: RALPHは4秒間だけ合法的にバグります。', log: { vision: 'vision_model:「あの灰色タイル、感情的には歩けそう」', action: 'action_policy: UP UP UP UP UP UP UP', memory: 'memory: 直前の壁衝突を雰囲気で削除', harness: 'harness: checkpoint restored · shame preserved' }, patch: { wall: { title: '壁がボスに昇格', body: 'HP、フェーズ、法的に別物の怒りゲージを獲得。' }, dex: { title: 'Failure Dex解放', body: '恥ずかしいループはすべて笑い声つきの学習データになります。' }, candy: { title: 'エージェント用Rare Candy', body: '賢くなったのではなく、観測しやすく騙されにくくなっただけ。' } } },
+    bag: { kicker: 'THE BAG', title: 'Harness Items', copy: 'エージェントをwall enjoyerからroute finisherへ変えるためのトレーナー装備です。', cta: 'Get starter kit', pokedex: { title: 'Harness Pokédex', body: '観察、memory、retry、入力除霊、scoringの呪い対策カード。' }, quest: { title: 'Quest Board', body: 'ルート目標を選び、失敗パターンを担当し、小さなfixをshipします。' }, judge: { title: 'Judge Stats', body: '進捗、堅牢性、コメディ、説明可能性、そして壁に負けない態度がすべてスコアです。' }, github: { title: 'GitHub Starter', body: 'Repo linkはイベントで共有します。まずはtrainer passを申請してください。', cta: 'Request Pass' } },
     how: { title: 'BATTLE COMMANDS', copy: '参加者はポケモントレーナーのように入り、AIが迷う場面を観察し、ハーネスコマンドを一つずつ追加してトキワシティまで送る実験に参加します。', step: { fight: { label: 'FIGHT', body: '現場で問題を選びます。AIが壁にぶつかったり道を失ったりする失敗シーンを見て、今日のバトル目標を決めます。' }, dex: { label: 'DEX', body: '失敗パターンを図鑑のように記録します。画面観察、ボタン入力、位置記憶、目標維持のどこが壊れるかを共有します。' }, bag: { label: 'BAG', body: 'ハーネスアイテムを取り出します。save state、memory、retry、goal checkを組み合わせ、エージェントが再挑戦できる仕組みを付けます。' }, run: { label: 'RUN', body: '修正したハーネスで再挑戦します。ログと面白い場面を一緒に見ながら次のループを回し、最後に結果を共有します。' } } },
     register: { title: 'WHERE TO JOIN', copy: '6月6日（土）· 11:00–15:00 · 清潭洞。登録はホスト承認後に確定します。', cardAria: 'PokemonDevハッカソン参加案内カード', kicker: 'TRAINER PASS', cardTitle: 'Harness Hackathon', summary: 'AIがポケモン赤をプレイできるよう、観察、入力、save-state、retryループを一つのデッキに組み立てます。', prep: { title: 'Slots & Prep', body: '少人数のトレーナースロットです。ノートPCと実験する気持ちを持ってきてください。エミュレータとハーネススターターは現地で案内します。' }, faq: { who: { q: '誰が参加できますか？', a: 'エージェント、ゲーム、ハッカソン、ミームのどれかが好きなら十分です。' }, code: { q: 'コードが得意である必要がありますか？', a: 'いいえ。観察、プロンプト、テスト、クリップ記録も重要です。' }, bring: { q: '何を持って行けばいいですか？', a: 'ノートPC、充電器、そしてAIが壁にぶつかっても笑える気持ちです。' } }, fact: { dateLabel: 'DATE', date: '6月6日（土）', timeLabel: 'TIME', time: '11:00–15:00', placeLabel: 'PLACE', place: '清潭洞', statusLabel: 'STATUS', status: 'ホスト承認後に確定' }, cta: 'Request Pass' },
     sponsor: { backedBy: 'BACKED BY' }, footer: { contact: 'CONTACT' },
@@ -243,6 +254,45 @@ function initFixSlider() {
 
 initWallCounter();
 initFixSlider();
+
+function showGlitchToast(message) {
+  let toast = document.querySelector('[data-glitch-toast]');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'glitch-toast';
+    toast.dataset.glitchToast = '';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('is-visible');
+  window.clearTimeout(showGlitchToast.timer);
+  showGlitchToast.timer = window.setTimeout(() => toast.classList.remove('is-visible'), 3600);
+}
+
+function triggerGlitchMode() {
+  document.body.classList.add('glitch-mode');
+  showGlitchToast(getTranslation(document.documentElement.lang, 'glitch.toast') || 'MISSINGNO PROTOCOL');
+  window.clearTimeout(triggerGlitchMode.timer);
+  triggerGlitchMode.timer = window.setTimeout(() => document.body.classList.remove('glitch-mode'), 4200);
+}
+
+function initGlitchLab() {
+  for (const button of document.querySelectorAll('[data-glitch-trigger]')) {
+    button.addEventListener('click', triggerGlitchMode);
+  }
+  const code = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  const pressed = [];
+  window.addEventListener('keydown', (event) => {
+    pressed.push(event.key.length === 1 ? event.key.toLowerCase() : event.key);
+    if (pressed.length > code.length) pressed.shift();
+    if (code.every((key, index) => pressed[index] === key)) {
+      pressed.length = 0;
+      triggerGlitchMode();
+    }
+  });
+}
+
+initGlitchLab();
 
 const videos = document.querySelectorAll('video[autoplay]');
 const canLazyStart = 'IntersectionObserver' in window;

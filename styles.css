@@ -4009,3 +4009,65 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
     transform-origin: left top !important;
   }
 }
+
+
+/* Cursed content pass: GLITCH LAB + MissingNo easter egg. */
+.failure-card.cursed {
+  background: linear-gradient(135deg, #111 0 48%, #ff4fd8 48% 52%, #fff8df 52%);
+  color: #fff;
+  transform: rotate(-.6deg);
+}
+.failure-card.cursed:nth-child(even) { transform: rotate(.7deg); }
+.failure-card.cursed p { color: rgba(255,255,255,.9); text-shadow: 1px 1px 0 #111; }
+.failure-card.cursed span { background: #43ff64; color: #111; }
+
+.glitch-lab-section {
+  position: relative;
+  background: #16061f;
+  color: #fff;
+  border-top: 8px solid #43ff64;
+  border-bottom: 8px solid #ff4fd8;
+}
+.glitch-lab-section::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none; opacity: .18;
+  background: repeating-linear-gradient(0deg, transparent 0 9px, rgba(67,255,100,.8) 10px), radial-gradient(circle at 18% 22%, #ff4fd8 0 0.8rem, transparent 0.9rem), radial-gradient(circle at 84% 78%, #43ff64 0 0.65rem, transparent 0.75rem);
+  mix-blend-mode: screen;
+}
+.glitch-lab-section .section-title-row, .glitch-lab-grid { position: relative; z-index: 1; }
+.glitch-lab-section .section-copy { color: rgba(255,255,255,.82); }
+.glitch-trigger {
+  align-self: flex-start; padding: 14px 18px; border: 4px solid #111;
+  background: #43ff64; color: #111; box-shadow: 6px 6px 0 #ff4fd8;
+  font-family: var(--font-pixel); font-size: .56rem; cursor: pointer; text-transform: uppercase;
+}
+.glitch-trigger:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 #ff4fd8; }
+.glitch-lab-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; }
+.glitch-terminal, .cursed-patches article { border: 5px solid #43ff64; background: #050208; box-shadow: 10px 10px 0 #ff4fd8; }
+.terminal-chrome { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-bottom: 4px solid #43ff64; background: #111; }
+.terminal-chrome span { width: 12px; height: 12px; border-radius: 50%; background: #ff4fd8; box-shadow: 20px 0 0 #ffdf49, 40px 0 0 #43ff64; }
+.terminal-chrome b { margin-left: 48px; font-family: var(--font-pixel); font-size: .48rem; color: #43ff64; }
+.agent-log { margin: 0; padding: 22px 26px 24px 46px; display: grid; gap: 14px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.agent-log li { color: #d9ffd9; text-shadow: 0 0 10px rgba(67,255,100,.6); }
+.cursed-patches { display: grid; gap: 14px; }
+.cursed-patches article { padding: 18px; }
+.cursed-patches b { display: inline-block; margin-bottom: 10px; padding: 4px 8px; background: #ffdf49; color: #111; font-family: var(--font-pixel); font-size: .48rem; }
+.cursed-patches h3 { margin: 0 0 8px; font-size: 1.45rem; color: #43ff64; }
+.cursed-patches p { margin: 0; font-weight: 900; line-height: 1.45; }
+
+.glitch-toast {
+  position: fixed; z-index: 9999; left: 50%; bottom: 28px; transform: translate(-50%, 140%);
+  max-width: min(680px, calc(100vw - 32px)); padding: 16px 18px; border: 5px solid #111;
+  background: #ffdf49; color: #111; box-shadow: 8px 8px 0 #ff4fd8; font-weight: 1000;
+  opacity: 0; transition: transform .22s ease, opacity .22s ease;
+}
+.glitch-toast.is-visible { transform: translate(-50%, 0); opacity: 1; }
+body.glitch-mode { animation: missingno-shake .18s steps(2,end) infinite; }
+body.glitch-mode main { filter: hue-rotate(145deg) saturate(1.9) contrast(1.15); }
+body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mode .join-card { animation: missingno-card .42s steps(2,end) infinite; }
+@keyframes missingno-shake { 0%{transform:translate(0)} 50%{transform:translate(3px,-2px)} 100%{transform:translate(-2px,2px)} }
+@keyframes missingno-card { 0%{clip-path:inset(0)} 50%{clip-path:inset(8% 0 3% 0)} 100%{clip-path:inset(0 3% 0 0)} }
+
+@media (max-width: 1100px) { .glitch-lab-grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .glitch-trigger { width: 100%; } .agent-log { padding-left: 30px; font-size: .86rem; } }
+@media (prefers-reduced-motion: reduce) { body.glitch-mode, body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mode .join-card { animation: none; } }
