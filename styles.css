@@ -4780,3 +4780,113 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     top: 620px !important;
   }
 }
+
+/* Final mobile gameplay fit + webview balance pass.
+   - Mobile: keep the video content fully visible inside the Game Boy LCD.
+   - Webview: rebalance the 1280x720 hero so the center/lower space is not empty. */
+@media (max-width: 900px) {
+  .gameboy-frame {
+    overflow: hidden !important;
+  }
+  .gameboy-screen {
+    left: 16.5% !important;
+    top: 27.5% !important;
+    width: 67% !important;
+    max-width: 67% !important;
+    aspect-ratio: 4 / 3 !important;
+    background: #050505 !important;
+    overflow: hidden !important;
+    box-shadow: inset 0 0 0 2px #111, inset 0 0 0 5px rgba(255,255,255,.12) !important;
+  }
+  .gameboy-screen video,
+  .gameboy-screen .hero-video,
+  .gameboy-screen .video-pixel-scene {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    background: #050505 !important;
+  }
+  .gameboy-frame .video-topbar {
+    left: 16.5% !important;
+    top: 21.5% !important;
+    width: 67% !important;
+    max-width: 67% !important;
+    height: 20px !important;
+    overflow: hidden !important;
+  }
+  .gameboy-frame .video-caption-row {
+    left: 16.5% !important;
+    top: 72% !important;
+    width: 67% !important;
+    max-width: 67% !important;
+    height: 18px !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameboy-screen {
+    left: 16.5% !important;
+    top: 27.5% !important;
+    width: 67% !important;
+    max-width: 67% !important;
+  }
+  .gameboy-frame .video-topbar {
+    left: 16.5% !important;
+    top: 21% !important;
+    width: 67% !important;
+    max-width: 67% !important;
+  }
+  .gameboy-frame .video-caption-row {
+    left: 16.5% !important;
+    top: 72% !important;
+    width: 67% !important;
+    max-width: 67% !important;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1350px) {
+  .tcg-hero {
+    min-height: 690px !important;
+  }
+  .hero-content {
+    top: 104px !important;
+    left: 5.2% !important;
+    width: min(520px, 41vw) !important;
+    gap: 13px !important;
+  }
+  .battle-dialog {
+    padding: 20px 23px !important;
+  }
+  .hero-cta-panel {
+    padding: 17px 19px !important;
+  }
+  .battle-menu {
+    width: min(520px, 100%) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 20px !important;
+    padding: 15px 20px 14px !important;
+  }
+  .battle-menu a {
+    min-height: 46px !important;
+    padding: 12px 10px 10px 34px !important;
+  }
+  .hero-video-shell {
+    top: 96px !important;
+    right: 2.4% !important;
+    width: min(640px, 49vw) !important;
+  }
+  .enemy-harness-status,
+  .player-harness-status {
+    transform: scale(.62) !important;
+  }
+  .enemy-harness-status {
+    left: 50.5% !important;
+    top: 585px !important;
+  }
+  .player-harness-status {
+    left: 67% !important;
+    top: 585px !important;
+  }
+}
