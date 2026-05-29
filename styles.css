@@ -145,8 +145,8 @@ h1 span { color: var(--cyan); }
 .how-section { background: #111; color: #fff; }
 .how-section h2, .register-band h2 { margin: 0 0 24px; font-size: clamp(2.5rem, 4vw, 4.8rem); font-style: italic; }
 .how-copy { max-width: 980px; margin: -8px 0 28px; color: rgba(255,255,255,.78); font-size: clamp(1rem, 1.5vw, 1.18rem); line-height: 1.75; }
-.how-section ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0; padding: 0; list-style: none; }
-.how-section li { padding: 24px; background: #222; border-top: 5px solid var(--cyan); } .how-section b { display: block; font-size: 1.7rem; margin-bottom: 10px; }
+.how-section ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.how-section li { min-width: 0; padding: 24px; background: #222; border-top: 5px solid var(--cyan); overflow-wrap: anywhere; } .how-section b { display: block; font-size: 1.7rem; margin-bottom: 10px; }
 .register-band { display: grid; grid-template-columns: .9fr 1fr; gap: 32px; align-items: center; background: linear-gradient(135deg, #fff, #eaffff); }
 .register-band p { font-size: 1.15rem; line-height: 1.6; }
 .luma-panel { display: grid; place-items: center; min-height: 300px; padding: 28px; border: 3px dashed #111; background: #fff; text-align: center; }
@@ -285,7 +285,7 @@ h1 span { color: var(--cyan); }
 .type-strip.psychic span { background: #ff72cb; }
 .move-line { margin: -10px 0 16px; color: #555; font-weight: 800; }
 
-.command-list { grid-template-columns: repeat(4, 1fr) !important; }
+.command-list { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
 .command-list li { border: 4px solid #fff; border-top-color: var(--cyan); box-shadow: 8px 8px 0 rgba(255,255,255,.08); }
 
 @media (max-width: 900px) {
@@ -3698,7 +3698,23 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   font-weight: 900;
   line-height: 1.35;
 }
-.join-card-cta { min-width: 100%; }
+.join-card-cta {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: auto;
+  padding-block: 13px;
+  white-space: normal;
+  text-align: center;
+}
+.join-card-cta span {
+  font-size: inherit;
+  line-height: 1.15;
+}
+.join-card-cta span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
 .hashed-sponsor {
   display: flex;
   align-items: center;
@@ -3752,14 +3768,20 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
 }
 
 .join-card .type-strip {
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow: hidden;
+  overflow: visible;
 }
 .join-card .type-strip span {
+  flex: 1 1 12rem;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: visible;
+  font-size: .56rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  line-height: 1.35;
 }
 .join-card .type-strip b {
   flex: 0 0 auto;
@@ -4010,7 +4032,6 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   }
 }
 
-
 /* Cursed content pass: GLITCH LAB + MissingNo easter egg. */
 .failure-card.cursed {
   background: linear-gradient(135deg, #111 0 48%, #ff4fd8 48% 52%, #fff8df 52%);
@@ -4103,5 +4124,139 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
   }
   .player-run-video-shell {
     width: min(430px, 34vw) !important;
+  }
+}
+
+@media (min-width: 1351px) {
+  .hero-cta-panel {
+    top: 236px !important;
+    padding: 8px 12px;
+    z-index: 9;
+  }
+  .hero-cta-actions {
+    gap: 6px;
+  }
+  .hero-cta-actions .tcg-button {
+    min-height: 32px;
+    padding-inline: 16px;
+    font-size: .46rem;
+  }
+  .hero-status-line {
+    margin-top: 5px;
+    font-size: .8rem;
+    line-height: 1.16;
+  }
+}
+
+.battle-dialog {
+  overflow: hidden;
+}
+.battle-shout {
+  max-width: 100%;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+@media (max-width: 900px) {
+  .battle-dialog {
+    min-height: auto !important;
+    padding-block: 12px !important;
+  }
+  .battle-shout {
+    font-size: clamp(.5rem, 2.15vw, .62rem) !important;
+    line-height: 1.45 !important;
+  }
+}
+@media (max-width: 480px) {
+  .battle-dialog {
+    padding-block: 10px !important;
+  }
+  .battle-shout {
+    font-size: clamp(.46rem, 2.7vw, .58rem) !important;
+    line-height: 1.42 !important;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1350px) {
+  .enemy-harness-status {
+    left: 38% !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .enemy-harness-status {
+    left: 40% !important;
+    transform: scale(.46) !important;
+  }
+}
+
+@media (min-width: 1601px) {
+  .battle-dialog {
+    left: calc(50% - 740px) !important;
+  }
+  .hero-cta-panel {
+    left: calc(50% - 738px) !important;
+  }
+  .player-harness-status {
+    left: calc(50% - 740px) !important;
+  }
+  .player-run-video-shell {
+    left: calc(50% - 750px) !important;
+  }
+  .battle-menu {
+    left: calc(50% - 88px) !important;
+    right: auto !important;
+    width: 245px !important;
+  }
+  .enemy-harness-status {
+    left: calc(50% + 88px) !important;
+    right: auto !important;
+  }
+  .hero-video-shell {
+    left: calc(50% + 170px) !important;
+    right: auto !important;
+    width: min(650px, 33vw) !important;
+  }
+}
+
+@media (min-width: 1601px) {
+  .player-harness-status {
+    top: 360px !important;
+    bottom: auto !important;
+    width: 260px !important;
+    height: 52px !important;
+    padding: 7px 10px !important;
+    transform: rotate(-1deg) !important;
+  }
+  .player-harness-status::after {
+    display: none !important;
+  }
+  .player-harness-status strong {
+    font-size: .62rem !important;
+  }
+  .player-harness-status span {
+    margin-left: 8px !important;
+    font-size: .48rem !important;
+  }
+  .player-harness-status .hp-row {
+    margin-top: 5px !important;
+    gap: 5px !important;
+  }
+  .player-harness-status .hp-row b {
+    font-size: .38rem !important;
+  }
+  .player-harness-status .hp-row i {
+    height: 8px !important;
+    border-width: 2px !important;
+  }
+  .player-harness-status em {
+    margin-top: 2px !important;
+    font-size: .54rem !important;
+  }
+  .player-run-video-shell {
+    bottom: 24px !important;
+    width: min(520px, 28vw) !important;
+    max-width: 520px !important;
   }
 }
