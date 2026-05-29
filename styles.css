@@ -4278,22 +4278,23 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
   .tcg-logo small { font-size: .4rem; }
   .tcg-nav nav {
     justify-content: center;
-    gap: 10px;
+    gap: 7px;
     min-width: 0;
+    flex-wrap: wrap;
+    row-gap: 6px;
   }
   .tcg-nav nav a {
-    padding: 8px 10px;
-    font-size: .5rem;
-    letter-spacing: -.02em;
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 7px 8px;
+    font-size: .46rem;
+    letter-spacing: -.035em;
     border-width: 2px;
     box-shadow: 3px 3px 0 #111;
     background: rgba(255, 248, 223, .92);
+    white-space: nowrap;
   }
-  .tcg-nav nav a:nth-child(2),
-  .tcg-nav nav a:nth-child(4),
-  .tcg-nav nav a:nth-child(5),
-  .tcg-nav nav a:nth-child(6),
-  .tcg-nav nav a:nth-child(7) { display: none; }
   .language-switcher { justify-self: end; gap: 6px; }
   .language-switcher button {
     min-width: 36px;
