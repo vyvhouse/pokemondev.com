@@ -4071,3 +4071,37 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
 @media (max-width: 1100px) { .glitch-lab-grid { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .glitch-trigger { width: 100%; } .agent-log { padding-left: 30px; font-size: .86rem; } }
 @media (prefers-reduced-motion: reduce) { body.glitch-mode, body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mode .join-card { animation: none; } }
+
+/* Final hero screenshot QA: account for status-card speech tails and transformed
+   video frames, not just DOM boxes. Keep HP plates out of the GBA artwork at
+   the common 1280px share/screenshot width. */
+@media (min-width: 901px) and (max-width: 1350px) {
+  .enemy-harness-status {
+    left: 35.2% !important;
+    top: 108px !important;
+    right: auto !important;
+    transform: scale(.54) !important;
+    transform-origin: left top !important;
+    z-index: 7 !important;
+  }
+  .enemy-harness-status::after {
+    display: none !important;
+  }
+  .hero-video-shell {
+    right: 2.2% !important;
+    top: 156px !important;
+    width: min(500px, 39vw) !important;
+  }
+  .player-harness-status::after {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1350px) {
+  .battle-dialog {
+    width: min(420px, 32vw) !important;
+  }
+  .player-run-video-shell {
+    width: min(430px, 34vw) !important;
+  }
+}
