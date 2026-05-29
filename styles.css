@@ -4520,3 +4520,215 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     font-size: .3rem !important;
   }
 }
+
+/* Final readability pass: keep the pixel-art tone, but raise the floor for
+   text users actually need to read on desktop webviews and phones. */
+:root {
+  --readable-pixel-xs: .58rem;
+  --readable-pixel-sm: .66rem;
+  --readable-pixel-md: .74rem;
+}
+
+.tcg-nav nav a,
+.language-switcher button,
+.section-kicker,
+.type-strip,
+.trainer-note span,
+.black-button,
+.failure-card::before,
+.glitch-console .console-label,
+.glitch-patch-card .patch-index,
+.route-node,
+.battle-card .type-badge {
+  font-size: max(var(--readable-pixel-xs), 10px) !important;
+}
+
+.battle-dialog,
+.battle-menu a,
+.tcg-button,
+.hero-cta-panel,
+.hero-status-line,
+.card-header,
+.card-attack,
+.card-ability,
+.flavor-line,
+.command-list li,
+.score-card,
+.faq-item,
+.glitch-console li,
+.patch-copy,
+.failure-card p {
+  font-size: max(var(--readable-pixel-sm), 11px) !important;
+}
+
+.video-topbar,
+.video-caption-row,
+.gameboy-frame .video-topbar,
+.gameboy-frame .video-caption-row {
+  font-size: max(.52rem, 9px) !important;
+}
+
+.video-topbar b,
+.gameboy-frame .video-topbar b,
+.video-caption-row span,
+.gameboy-frame .video-caption-row span {
+  font-size: max(.58rem, 10px) !important;
+}
+
+.battle-status {
+  font-size: max(.72rem, 12px) !important;
+}
+
+.section-copy,
+.how-copy,
+.register-card p,
+.news-body p,
+.trainer-note p,
+.glitch-copy,
+.footer-copy {
+  font-size: clamp(1.02rem, 1.2vw, 1.18rem) !important;
+  line-height: 1.68;
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .tcg-nav nav a {
+    font-size: .64rem !important;
+    padding-inline: 12px;
+  }
+  .hero-cta-actions .tcg-button,
+  .battle-menu a {
+    font-size: .68rem !important;
+  }
+  .battle-dialog {
+    font-size: .7rem !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .tcg-nav nav a,
+  .language-switcher button {
+    font-size: .58rem !important;
+  }
+  .battle-dialog {
+    font-size: .64rem !important;
+    line-height: 1.75;
+  }
+  .battle-menu a,
+  .tcg-button,
+  .hero-cta-panel,
+  .hero-status-line {
+    font-size: .64rem !important;
+  }
+  .gameboy-frame .video-topbar,
+  .gameboy-frame .video-caption-row {
+    font-size: .42rem !important;
+  }
+  .gameboy-frame .video-topbar b,
+  .gameboy-frame .video-caption-row span {
+    font-size: .48rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tcg-nav nav a,
+  .language-switcher button {
+    font-size: .56rem !important;
+  }
+  .battle-dialog {
+    font-size: .62rem !important;
+  }
+  .battle-menu a,
+  .tcg-button,
+  .hero-cta-panel,
+  .hero-status-line {
+    font-size: .61rem !important;
+  }
+  .gameboy-frame .video-topbar,
+  .gameboy-frame .video-caption-row {
+    font-size: .37rem !important;
+  }
+  .gameboy-frame .video-topbar b,
+  .gameboy-frame .video-caption-row span {
+    font-size: .42rem !important;
+  }
+  .section-copy,
+  .how-copy,
+  .register-card p,
+  .news-body p,
+  .trainer-note p,
+  .glitch-copy,
+  .footer-copy {
+    font-size: 1rem !important;
+  }
+}
+
+/* Mobile GBA containment: keep the enlarged gameplay screen inside the device
+   shell. This intentionally overrides the earlier overflow:visible art pass. */
+@media (max-width: 900px) {
+  .gameboy-frame {
+    overflow: hidden !important;
+  }
+  .gameboy-frame .video-topbar {
+    left: 17% !important;
+    top: 21.5% !important;
+    width: 66% !important;
+    max-width: 66% !important;
+    height: 22px !important;
+    line-height: 1 !important;
+    overflow: hidden !important;
+  }
+  .gameboy-screen {
+    left: 17% !important;
+    top: 28% !important;
+    width: 66% !important;
+    max-width: 66% !important;
+    overflow: hidden !important;
+  }
+  .gameboy-screen video,
+  .gameboy-screen .hero-video,
+  .gameboy-screen .video-pixel-scene {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .gameboy-frame .video-caption-row {
+    left: 17% !important;
+    top: 72% !important;
+    width: 66% !important;
+    max-width: 66% !important;
+    height: 20px !important;
+    line-height: 1 !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameboy-frame .video-topbar {
+    left: 16% !important;
+    top: 20% !important;
+    width: 68% !important;
+    max-width: 68% !important;
+    height: 20px !important;
+    font-size: .33rem !important;
+  }
+  .gameboy-frame .video-topbar b {
+    font-size: .36rem !important;
+  }
+  .gameboy-screen {
+    left: 16% !important;
+    top: 27% !important;
+    width: 68% !important;
+    max-width: 68% !important;
+  }
+  .gameboy-frame .video-caption-row {
+    left: 16% !important;
+    top: 71% !important;
+    width: 68% !important;
+    max-width: 68% !important;
+    height: 19px !important;
+    font-size: .32rem !important;
+  }
+  .gameboy-frame .video-caption-row span {
+    font-size: .36rem !important;
+  }
+}
