@@ -4210,12 +4210,53 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     width: 245px !important;
   }
   .enemy-harness-status {
-    left: calc(50% + 156px) !important;
+    left: calc(50% + 88px) !important;
     right: auto !important;
   }
   .hero-video-shell {
-    left: calc(50% + 250px) !important;
+    left: calc(50% + 170px) !important;
     right: auto !important;
-    width: min(720px, 35vw) !important;
+    width: min(650px, 33vw) !important;
+  }
+}
+
+@media (min-width: 1601px) {
+  .player-harness-status {
+    top: 360px !important;
+    bottom: auto !important;
+    width: 260px !important;
+    height: 52px !important;
+    padding: 7px 10px !important;
+    transform: rotate(-1deg) !important;
+  }
+  .player-harness-status::after {
+    display: none !important;
+  }
+  .player-harness-status strong {
+    font-size: .62rem !important;
+  }
+  .player-harness-status span {
+    margin-left: 8px !important;
+    font-size: .48rem !important;
+  }
+  .player-harness-status .hp-row {
+    margin-top: 5px !important;
+    gap: 5px !important;
+  }
+  .player-harness-status .hp-row b {
+    font-size: .38rem !important;
+  }
+  .player-harness-status .hp-row i {
+    height: 8px !important;
+    border-width: 2px !important;
+  }
+  .player-harness-status em {
+    margin-top: 2px !important;
+    font-size: .54rem !important;
+  }
+  .player-run-video-shell {
+    bottom: 24px !important;
+    width: min(520px, 28vw) !important;
+    max-width: 520px !important;
   }
 }
