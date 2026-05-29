@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" data-i18n-content="meta.description" content="ULWmon — AI가 포켓몬 레드를 플레이해 초록마을까지 갈 수 있는지 실험하는 에이전트 하네스 밈-해커톤." />
-    <meta property="og:title" data-i18n-content="meta.title" content="ULWmon : AI가 포켓몬을 깰 수 있을까?" />
+    <meta name="description" data-i18n-content="meta.description" content="PokemonDev — AI가 포켓몬 레드를 플레이해 초록마을까지 갈 수 있는지 실험하는 에이전트 하네스 밈-해커톤." />
+    <meta property="og:title" data-i18n-content="meta.title" content="PokemonDev : AI가 포켓몬을 깰 수 있을까?" />
     <meta property="og:description" data-i18n-content="meta.ogDescription" content="포켓몬 레드에서 초록마을까지. 에이전트 하네스를 깎고 AI가 정신 나가는 걸 같이 봅니다." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pokemondev.com/" />
@@ -13,11 +13,11 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" data-i18n-content="meta.title" content="ULWmon : AI가 포켓몬을 깰 수 있을까?" />
+    <meta name="twitter:title" data-i18n-content="meta.title" content="PokemonDev : AI가 포켓몬을 깰 수 있을까?" />
     <meta name="twitter:description" data-i18n-content="meta.ogDescription" content="포켓몬 레드에서 초록마을까지. 에이전트 하네스를 깎고 AI가 정신 나가는 걸 같이 봅니다." />
     <meta name="twitter:image" content="https://pokemondev.com/assets/og-image.jpg" />
     <meta name="theme-color" content="#050505" />
-    <title data-i18n="meta.title">ULWmon : AI가 포켓몬을 깰 수 있을까?</title>
+    <title data-i18n="meta.title">PokemonDev : AI가 포켓몬을 깰 수 있을까?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet" />
@@ -32,6 +32,9 @@
       <nav>
         <a href="#proof" data-i18n="nav.event">EVENT</a>
         <a href="#news" data-i18n="nav.ralph">POKEMON RALPH</a>
+        <a href="#fix" data-i18n="nav.fix">THE FIX</a>
+        <a href="#run-status" data-i18n="nav.status">RUN STATUS</a>
+        <a href="#bag" data-i18n="nav.bag">THE BAG</a>
         <a href="#how" data-i18n="nav.how">HOW TO PLAY</a>
         <a href="#register" data-i18n="nav.join">WHERE TO JOIN</a>
       </nav>
@@ -72,7 +75,15 @@
 
         <div class="hero-content">
           <div class="battle-dialog" role="note">
-            <p class="battle-shout" data-i18n="hero.shout">Go! HARNESS!</p>
+            <p class="battle-shout" data-i18n="hero.shout">AI는 강하다. 하지만 벽은 더 강했다.</p>
+          </div>
+          <div class="hero-cta-panel" aria-label="PokemonDev run status">
+            <div class="hero-cta-actions">
+              <a class="tcg-button primary" href="https://luma.com/izrwu9dk" target="_blank" rel="noreferrer"><span data-i18n="hero.cta.pass">Request Pass</span> <span>›</span></a>
+              <a class="tcg-button secondary" href="#proof"><span data-i18n="hero.cta.watch">Watch the run</span> <span>↓</span></a>
+            </div>
+            <p class="hero-status-line"><span data-i18n="hero.status.countdown">T-8 days · limited trainer slots</span></p>
+            <p class="hero-status-line hashed-line"><span data-i18n="hero.status.hashed">Hashed-backed agent harness sprint.</span></p>
           </div>
           <div class="battle-menu" data-i18n-aria-label="hero.menuAria" aria-label="배틀 커맨드">
             <a class="selected" href="#proof" data-i18n="hero.menu.fight">FIGHT</a>
@@ -148,7 +159,91 @@
           </article>
           </div>
         </div>
+        <div class="failure-gallery" aria-labelledby="failure-gallery-title">
+          <div class="failure-gallery-head">
+            <h3 id="failure-gallery-title" data-i18n="news.galleryTitle">Failure Gallery</h3>
+            <div class="wall-counter" data-wall-counter data-start="0" data-end="404" data-suffix=" bumps">
+              <span data-i18n="news.wallCounterLabel">Wall bump counter</span>
+              <strong data-wall-counter-value>0 bumps</strong>
+            </div>
+          </div>
+          <div class="failure-grid">
+            <article class="failure-card"><span>01</span><h4 data-i18n="news.failure.wall.title">Wall loop</h4><p data-i18n="news.failure.wall.body">Repeats the same step because the screen looks “almost right.”</p></article>
+            <article class="failure-card"><span>02</span><h4 data-i18n="news.failure.menu.title">Menu panic</h4><p data-i18n="news.failure.menu.body">Opens menus, cancels menus, then forgets why it opened them.</p></article>
+            <article class="failure-card"><span>03</span><h4 data-i18n="news.failure.grass.title">Grass fear</h4><p data-i18n="news.failure.grass.body">Treats tall grass like a production outage.</p></article>
+            <article class="failure-card"><span>04</span><h4 data-i18n="news.failure.button.title">Button mash</h4><p data-i18n="news.failure.button.body">More A presses do not create a plan.</p></article>
+          </div>
+        </div>
         <div class="carousel-dots" aria-hidden="true"><span class="active"></span><span></span><span></span></div>
+      </section>
+
+      <section class="fix-section expansion-section" id="fix" aria-labelledby="fix-title">
+        <div class="section-title-row">
+          <div>
+            <p class="section-kicker" data-i18n="fix.kicker">THE FIX</p>
+            <h2 id="fix-title" data-i18n="fix.title">Before / After Harness</h2>
+            <p class="section-copy" data-i18n="fix.copy">Same route, different loop: memory, retry, and goal checks turn wall comedy into measurable progress.</p>
+          </div>
+        </div>
+        <div class="fix-comparison">
+          <div class="fix-video before"><video src="assets/video/news-card.mov" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="fix.beforeVideoAria" aria-label="Before harness wall loop"></video><span data-i18n="fix.beforeLabel">BEFORE: wall loop</span></div>
+          <div class="fix-slider" data-fix-slider>
+            <div class="fix-slider-stage">
+              <video src="assets/video/news-card.mov" autoplay muted loop playsinline preload="metadata" aria-label="Before clip"></video>
+              <div class="fix-slider-overlay" data-fix-overlay><video src="assets/video/news-card-right.mov" autoplay muted loop playsinline preload="metadata" aria-label="After clip"></video></div>
+            </div>
+            <label><span data-i18n="fix.sliderLabel">Harness mix</span><input type="range" min="0" max="100" value="58" data-fix-range /></label>
+          </div>
+          <div class="fix-video after"><video src="assets/video/news-card-right.mov" autoplay muted loop playsinline preload="metadata" data-i18n-aria-label="fix.afterVideoAria" aria-label="After harness recovery"></video><span data-i18n="fix.afterLabel">AFTER: recovery loop</span></div>
+        </div>
+        <div class="metric-strip">
+          <div><b data-i18n="fix.metric.memory.label">Memory</b><span data-i18n="fix.metric.memory.value">route + objective kept alive</span></div>
+          <div><b data-i18n="fix.metric.retry.label">Retry</b><span data-i18n="fix.metric.retry.value">failed states become next attempts</span></div>
+          <div><b data-i18n="fix.metric.goal.label">Goal check</b><span data-i18n="fix.metric.goal.value">Viridian stays on screen</span></div>
+        </div>
+      </section>
+
+      <section class="run-status-section expansion-section" id="run-status" aria-labelledby="run-status-title">
+        <div class="section-title-row">
+          <div>
+            <p class="section-kicker" data-i18n="runStatus.kicker">RUN STATUS</p>
+            <h2 id="run-status-title" data-i18n="runStatus.title">Route to Viridian</h2>
+            <p class="section-copy" data-i18n="runStatus.copy">A static scoreboard for the hackathon sprint: clear route checkpoints, funny failures, and recovery wins.</p>
+          </div>
+        </div>
+        <div class="run-status-grid">
+          <ol class="route-map" aria-label="PokemonDev route map">
+            <li class="done"><b>LAB</b><span data-i18n="runStatus.route.lab">Starter selected</span></li>
+            <li class="done"><b>PALLET</b><span data-i18n="runStatus.route.pallet">Door found</span></li>
+            <li class="active"><b>R01</b><span data-i18n="runStatus.route.route01">Wall boss engaged</span></li>
+            <li><b>VIRIDIAN</b><span data-i18n="runStatus.route.viridian">Target city</span></li>
+          </ol>
+          <div class="leaderboard-card">
+            <h3 data-i18n="runStatus.boardTitle">Static Leaderboard</h3>
+            <dl>
+              <div><dt data-i18n="runStatus.leader.wall.label">Most wall bumps</dt><dd data-i18n="runStatus.leader.wall.value">Ralph baseline · 404</dd></div>
+              <div><dt data-i18n="runStatus.leader.recovery.label">Best recovery</dt><dd data-i18n="runStatus.leader.recovery.value">Harness loop · save-state retry</dd></div>
+              <div><dt data-i18n="runStatus.leader.clip.label">Funniest clip</dt><dd data-i18n="runStatus.leader.clip.value">Menu panic into victory pose</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="bag-section expansion-section" id="bag" aria-labelledby="bag-title">
+        <div class="section-title-row">
+          <div>
+            <p class="section-kicker" data-i18n="bag.kicker">THE BAG</p>
+            <h2 id="bag-title" data-i18n="bag.title">Harness Items</h2>
+            <p class="section-copy" data-i18n="bag.copy">Everything a trainer needs to turn an agent from wall enjoyer into route finisher.</p>
+          </div>
+          <a href="#register"><span data-i18n="bag.cta">Get starter kit</span> <span>›</span></a>
+        </div>
+        <div class="bag-grid">
+          <article class="bag-card"><h3 data-i18n="bag.pokedex.title">Harness Pokédex</h3><p data-i18n="bag.pokedex.body">Compact cards for observation, memory, retry, inputs, and scoring.</p></article>
+          <article class="bag-card"><h3 data-i18n="bag.quest.title">Quest Board</h3><p data-i18n="bag.quest.body">Pick a route objective, claim a failure pattern, ship a tiny fix.</p></article>
+          <article class="bag-card"><h3 data-i18n="bag.judge.title">Judge Stats</h3><p data-i18n="bag.judge.body">Progress, robustness, comedy, and explainability all count.</p></article>
+          <article class="bag-card cta"><h3 data-i18n="bag.github.title">GitHub Starter</h3><p data-i18n="bag.github.body">Repo link drops at the event. For now, request a trainer pass.</p><a class="black-button" href="#register" data-i18n="bag.github.cta">Request Pass</a></article>
+        </div>
       </section>
 
       <section class="how-section" id="how" aria-labelledby="how-title">
@@ -166,9 +261,18 @@
         <div>
           <h2 id="register-title" data-i18n="register.title">WHERE TO JOIN</h2>
           <p data-i18n="register.copy">6월 6일 토요일 · 11:00–15:00 · 청담동. 등록은 호스트 승인 후 확정됩니다.</p>
+          <div class="join-prep">
+            <h3 data-i18n="register.prep.title">Slots & Prep</h3>
+            <p data-i18n="register.prep.body">소수 트레이너 슬롯. 노트북과 실험할 마음만 가져오세요. 에뮬레이터와 하네스 스타터는 현장에서 안내합니다.</p>
+          </div>
+          <div class="faq-list" aria-label="PokemonDev FAQ">
+            <details open><summary data-i18n="register.faq.who.q">누가 참여할 수 있나요?</summary><p data-i18n="register.faq.who.a">에이전트, 게임, 해커톤, 밈 중 하나라도 좋아하면 충분합니다.</p></details>
+            <details><summary data-i18n="register.faq.code.q">코드를 꼭 잘해야 하나요?</summary><p data-i18n="register.faq.code.a">아니요. 관찰, 프롬프트, 테스트, 클립 기록도 중요한 역할입니다.</p></details>
+            <details><summary data-i18n="register.faq.bring.q">무엇을 가져가면 되나요?</summary><p data-i18n="register.faq.bring.a">노트북, 충전기, 그리고 AI가 벽에 박아도 웃을 수 있는 마음이면 됩니다.</p></details>
+          </div>
         </div>
         <div class="luma-panel event-card-panel">
-          <article class="join-card tcg-card" data-tilt-card data-i18n-aria-label="register.cardAria" aria-label="ULWmon 해커톤 참가 안내 카드">
+          <article class="join-card tcg-card" data-tilt-card data-i18n-aria-label="register.cardAria" aria-label="PokemonDev 해커톤 참가 안내 카드">
             <div class="type-strip"><span>EVENT / HARNESS</span><b>ticket</b></div>
             <div class="join-card-body">
               <p class="join-kicker" data-i18n="register.kicker">TRAINER PASS</p>
