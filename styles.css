@@ -4864,6 +4864,7 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
   }
   .battle-menu {
     width: min(520px, 100%) !important;
+    max-width: 100% !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 0 20px !important;
     padding: 15px 20px 14px !important;
