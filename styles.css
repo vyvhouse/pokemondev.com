@@ -4732,3 +4732,51 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     font-size: .36rem !important;
   }
 }
+
+/* Webview density pass: fill the 1280x720 first screen without adding new copy.
+   The composition keeps the left action stack and right GBA as two blocks, but
+   pulls them closer and reduces dead lower space. */
+@media (min-width: 1101px) and (max-width: 1350px) {
+  .tcg-hero {
+    min-height: 705px !important;
+  }
+  .hero-content {
+    top: 116px !important;
+    left: 5.5% !important;
+    width: min(505px, 40vw) !important;
+    gap: 14px !important;
+  }
+  .battle-dialog {
+    padding: 20px 22px !important;
+  }
+  .hero-cta-panel {
+    padding: 16px 18px !important;
+  }
+  .battle-menu {
+    width: min(505px, 100%) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 18px !important;
+    padding: 14px 18px 13px !important;
+  }
+  .battle-menu a {
+    min-height: 44px !important;
+    padding: 11px 10px 9px 34px !important;
+  }
+  .hero-video-shell {
+    top: 108px !important;
+    right: 3.2% !important;
+    width: min(610px, 47vw) !important;
+  }
+  .enemy-harness-status,
+  .player-harness-status {
+    transform: scale(.6) !important;
+  }
+  .enemy-harness-status {
+    left: 51.5% !important;
+    top: 620px !important;
+  }
+  .player-harness-status {
+    left: 67.5% !important;
+    top: 620px !important;
+  }
+}
