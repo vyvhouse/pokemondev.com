@@ -4945,3 +4945,41 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     width: min(460px, 40vw) !important;
   }
 }
+
+/* Lift the lower-right CTA so it is visible sooner in the hero section while
+   keeping a safe gap above the HP plates on 1280px desktop layouts. */
+@media (min-width: 901px) {
+  .tcg-hero .hero-cta-panel {
+    bottom: 68px !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .tcg-hero .hero-cta-panel {
+    bottom: 56px !important;
+  }
+}
+
+/* First-fold CTA nudge for laptop-height hero screenshots: narrow the panel so
+   it can sit higher at the lower-right without covering HP plates. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-cta-panel {
+    width: min(340px, 30vw) !important;
+    bottom: 112px !important;
+  }
+}
+
+/* Balance the lifted CTA: keep it higher than the original placement, but wide
+   enough for the two button labels and clear of the HP plates. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-cta-panel {
+    width: min(500px, 40vw) !important;
+    bottom: 72px !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .tcg-hero .hero-cta-panel {
+    bottom: 88px !important;
+  }
+}
