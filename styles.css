@@ -4848,3 +4848,43 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
   content: none !important;
   display: none !important;
 }
+
+/* Hero CTA placement: keep the pass/watch panel anchored at the hero section's
+   lower-right on desktop instead of sitting in the left action stack. */
+@media (min-width: 901px) {
+  .tcg-hero .hero-cta-panel {
+    display: block !important;
+    position: absolute !important;
+    inset: auto 5% 34px auto !important;
+    width: min(680px, 48vw) !important;
+    margin: 0 !important;
+    z-index: 18 !important;
+  }
+
+  .tcg-hero .hero-cta-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .tcg-hero .hero-cta-actions .tcg-button {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .tcg-hero .hero-cta-panel {
+    right: 4% !important;
+    bottom: 24px !important;
+    width: min(560px, 52vw) !important;
+  }
+}
+
+/* Give the bottom-right CTA its own floor on compact desktop widths so it does
+   not cover the GBA video or HP plates. */
+@media (min-width: 901px) and (max-width: 1350px) {
+  .tcg-hero {
+    min-height: 860px !important;
+  }
+}
