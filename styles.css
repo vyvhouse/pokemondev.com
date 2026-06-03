@@ -5025,3 +5025,71 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     top: 506px !important;
   }
 }
+
+/* Correction: do not move the GBA to expose the CTA. Keep the GBA at the
+   established laptop position and move only the CTA panel directly below it. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-video-shell {
+    top: 66px !important;
+  }
+
+  .tcg-hero .hero-cta-panel {
+    top: 600px !important;
+    right: 5% !important;
+    bottom: auto !important;
+    width: min(500px, 40vw) !important;
+  }
+}
+
+/* Keep the GBA fixed and make the CTA compact enough to sit fully below it on
+   laptop-height screens. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-cta-panel {
+    top: 626px !important;
+    padding: 8px 12px !important;
+  }
+
+  .tcg-hero .hero-cta-actions {
+    gap: 10px !important;
+  }
+
+  .tcg-hero .hero-cta-actions .tcg-button {
+    min-height: 34px !important;
+    padding-inline: 10px !important;
+    font-size: .54rem !important;
+  }
+
+  .tcg-hero .hero-status-line {
+    margin-top: 6px !important;
+    font-size: .68rem !important;
+    line-height: 1.18 !important;
+  }
+}
+
+/* Final laptop CTA correction: top is relative to the hero, not the viewport.
+   With the GBA fixed, 540px places the compact CTA just below the GBA and fully
+   inside a 1280x720 first fold. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-cta-panel {
+    top: 540px !important;
+  }
+}
+
+/* Ensure the compact CTA clears the slightly taller 1350px GBA while still
+   fitting in 720px-high screenshots. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-cta-panel {
+    top: 548px !important;
+    padding: 6px 12px !important;
+  }
+
+  .tcg-hero .hero-cta-actions .tcg-button {
+    min-height: 32px !important;
+  }
+
+  .tcg-hero .hero-status-line {
+    margin-top: 4px !important;
+    font-size: .62rem !important;
+    line-height: 1.1 !important;
+  }
+}
