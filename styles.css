@@ -4983,3 +4983,45 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     bottom: 88px !important;
   }
 }
+
+/* Laptop hero visibility pass: put the CTA directly below the GBA shadow and
+   move HP plates out of that lane so the action panel is discoverable at a glance. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-video-shell {
+    top: 66px !important;
+  }
+
+  .tcg-hero .enemy-harness-status,
+  .tcg-hero .player-harness-status {
+    top: 640px !important;
+    transform: scale(.58) !important;
+  }
+
+  .tcg-hero .enemy-harness-status {
+    left: 5.2% !important;
+  }
+
+  .tcg-hero .player-harness-status {
+    left: 24% !important;
+  }
+
+  .tcg-hero .hero-cta-panel {
+    top: 560px !important;
+    right: 5% !important;
+    bottom: auto !important;
+    width: min(500px, 40vw) !important;
+    padding: 12px 14px !important;
+  }
+}
+
+/* Full first-fold CTA exposure on laptop-height screens. Lift the GBA block
+   rather than overlapping the CTA with its shadow. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-video-shell {
+    top: 10px !important;
+  }
+
+  .tcg-hero .hero-cta-panel {
+    top: 506px !important;
+  }
+}
