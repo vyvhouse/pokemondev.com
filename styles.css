@@ -4793,3 +4793,28 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     top: 585px !important;
   }
 }
+
+/* Mobile GBA LCD lock: the SVG shell is 800x600 and its LCD opening is
+   x=246 y=198 w=308 h=212. Earlier mobile overrides intentionally enlarged
+   the video to 66-68%, which made it spill over the actual GBA screen art. */
+@media (max-width: 900px) {
+  .gameboy-screen {
+    left: 30.75% !important;
+    top: 33% !important;
+    width: 38.5% !important;
+    max-width: 38.5% !important;
+    aspect-ratio: 308 / 212 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .gameboy-screen .hero-video,
+  .gameboy-screen video {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+}
