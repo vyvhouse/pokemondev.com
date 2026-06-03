@@ -3995,20 +3995,14 @@ h1 { text-shadow: 0 4px 0 #77bef9, 0 0 14px rgba(95,219,253,.72), 0 2px 0 #fff !
   transform: rotate(-.6deg);
 }
 .failure-card.cursed:nth-child(even) { transform: rotate(.7deg); }
-.failure-card.cursed h4,
-.failure-card.cursed p {
-  color: #fff8df;
-  text-shadow:
-    2px 0 0 #050509,
-    -2px 0 0 #050509,
-    0 2px 0 #050509,
-    0 -2px 0 #050509,
-    2px 2px 0 #050509,
-    -2px 2px 0 #050509,
-    2px -2px 0 #050509,
-    -2px -2px 0 #050509;
+.failure-card.cursed h4 {
+  color: #fff;
+  text-shadow: 1px 1px 0 #050509;
 }
-.failure-card.cursed p { color: #fff2a8; }
+.failure-card.cursed p {
+  color: #fff2a8;
+  text-shadow: 1px 1px 0 #050509;
+}
 .failure-card.cursed span { background: #43ff64; color: #111; }
 
 .glitch-lab-section {
