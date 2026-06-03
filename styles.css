@@ -5093,3 +5093,55 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     line-height: 1.1 !important;
   }
 }
+
+/* Wide desktop CTA correction: the previous fixed-GBA CTA rule only covered
+   laptop widths, so wider desktop layouts kept the CTA near the bottom. */
+@media (min-width: 1351px) and (max-width: 1500px) {
+  .tcg-hero .hero-cta-panel {
+    top: 548px !important;
+    right: 5% !important;
+    bottom: auto !important;
+  }
+}
+
+@media (min-width: 1501px) and (max-width: 1750px) {
+  .tcg-hero .hero-cta-panel {
+    top: 590px !important;
+    right: 5% !important;
+    bottom: auto !important;
+  }
+}
+
+@media (min-width: 1751px) {
+  .tcg-hero .hero-cta-panel {
+    top: 548px !important;
+    right: 5% !important;
+    bottom: auto !important;
+  }
+}
+
+/* Keep mid-desktop HP plates out of the CTA lane once the CTA is pulled up
+   under the GBA. */
+@media (min-width: 1351px) and (max-width: 1500px) {
+  .tcg-hero .enemy-harness-status,
+  .tcg-hero .player-harness-status {
+    top: 724px !important;
+    transform: scale(.58) !important;
+  }
+
+  .tcg-hero .enemy-harness-status {
+    left: 5.2% !important;
+  }
+
+  .tcg-hero .player-harness-status {
+    left: 24% !important;
+  }
+}
+
+/* Final first-fold polish: keep the laptop CTA immediately under the fixed GBA
+   while giving 720px-high screens enough bottom breathing room. */
+@media (min-width: 1181px) and (max-width: 1350px) {
+  .tcg-hero .hero-cta-panel {
+    top: 542px !important;
+  }
+}
