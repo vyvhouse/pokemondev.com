@@ -4831,3 +4831,26 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     object-position: center center !important;
   }
 }
+
+/* Battle menu cursor: draw the selector as CSS geometry instead of the ▶ glyph.
+   Some pixel-font/browser combinations render that Unicode glyph as mojibake. */
+.battle-menu a.selected::before,
+.battle-menu a:hover::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: .42em solid transparent;
+  border-bottom: .42em solid transparent;
+  border-left: .68em solid #111;
+  background: transparent;
+  line-height: 0;
+}
+
+/* Battle menu frame cleanup: remove decorative pseudo-corners that look like
+   stray ::before/::after handles in screenshots/devtools. */
+.battle-menu::before,
+.battle-menu::after {
+  content: none !important;
+  display: none !important;
+}
