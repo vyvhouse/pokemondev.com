@@ -4888,3 +4888,60 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     min-height: 860px !important;
   }
 }
+
+/* Mobile harness callout readability: only the decorative ▼ should be
+   absolutely positioned. The translated message span must stay in normal flow. */
+@media (max-width: 900px) {
+  .mobile-harness-callout {
+    width: 100% !important;
+    padding: 14px 22px 20px !important;
+  }
+
+  .mobile-harness-callout p {
+    width: min(100%, 560px) !important;
+    min-height: 0 !important;
+    padding: 20px 44px 20px 22px !important;
+    font-size: clamp(1.05rem, 4.2vw, 1.28rem) !important;
+    line-height: 1.45 !important;
+    text-align: left !important;
+  }
+
+  .mobile-harness-callout p > span[data-i18n="hero.mobileCallout"] {
+    position: static !important;
+    display: block !important;
+    right: auto !important;
+    bottom: auto !important;
+    font-size: inherit !important;
+    animation: none !important;
+  }
+
+  .mobile-harness-callout p > span[aria-hidden="true"] {
+    position: absolute !important;
+    right: 22px !important;
+    bottom: 16px !important;
+    font-size: .82rem !important;
+  }
+}
+
+/* Hero CTA compact width: keep the lower-right panel clear of the battle menu. */
+@media (min-width: 901px) {
+  .tcg-hero .hero-cta-panel {
+    width: min(560px, 40vw) !important;
+  }
+
+  .tcg-hero .hero-cta-actions .tcg-button {
+    padding-inline: 12px !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1350px) {
+  .tcg-hero .hero-cta-panel {
+    width: min(520px, 40vw) !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .tcg-hero .hero-cta-panel {
+    width: min(460px, 40vw) !important;
+  }
+}
