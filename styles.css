@@ -5148,27 +5148,27 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
   }
 }
 
-/* Hero command-pair pass: on wide desktop, stop treating the CTA as a loose
-   banner. Pair it with the battle menu by matching the menu's vertical lane and
-   turning the content into a compact command/status card. */
+/* Hero CTA under-dialog pass: on wide desktop, attach the action card under the
+   opening battle dialog so it reads as the next command panel without overlap. */
 @media (min-width: 1501px) {
-  .tcg-hero .battle-menu {
-    left: calc(50% - 176px) !important;
-    width: min(340px, 21vw) !important;
-    max-width: min(340px, 21vw) !important;
-  }
-
   .tcg-hero .hero-cta-panel {
-    top: 580px !important;
-    right: 5% !important;
+    top: 274px !important;
+    left: calc(50% - 738px) !important;
+    right: auto !important;
     bottom: auto !important;
-    width: min(480px, 30vw) !important;
-    min-height: 244px !important;
-    padding: 22px 24px 20px !important;
+    width: min(548px, 34vw) !important;
+    min-height: 224px !important;
+    padding: 20px 24px 18px !important;
     background: #fff7ff !important;
     display: grid !important;
     align-content: center !important;
-    gap: 14px !important;
+    gap: 12px !important;
+  }
+
+  .tcg-hero .player-harness-status {
+    top: 548px !important;
+    left: calc(50% - 738px) !important;
+    right: auto !important;
   }
 
   .tcg-hero .hero-cta-copy {
