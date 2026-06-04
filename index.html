@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260603-cta-under-gba" />
+    <link rel="stylesheet" href="styles.css?v=20260604-cta-menu-pair" />
   </head>
   <body>
     <header class="tcg-nav" data-i18n-aria-label="nav.aria" aria-label="상단 내비게이션">
@@ -85,11 +85,18 @@
         </div>
 
         <div class="hero-cta-panel" aria-label="PokemonDev run status">
+          <div class="hero-cta-copy">
+            <span class="hero-cta-kicker" data-i18n="hero.status.kicker">TRAINER PASS</span>
+            <strong data-i18n="hero.status.title">Run slot command</strong>
+          </div>
           <div class="hero-cta-actions">
             <a class="tcg-button primary" href="https://luma.com/izrwu9dk" target="_blank" rel="noreferrer"><span data-i18n="hero.cta.pass">Request Pass</span> <span>›</span></a>
             <a class="tcg-button secondary" href="#proof"><span data-i18n="hero.cta.watch">Watch the run</span> <span>↓</span></a>
           </div>
-          <p class="hero-status-line"><span data-i18n="hero.status.countdown">T-8 days · limited trainer slots</span></p>
+          <div class="hero-cta-meta" aria-label="Run availability">
+            <span data-i18n="hero.status.countdownShort">T-8 days</span>
+            <span data-i18n="hero.status.slots">Limited trainer slots</span>
+          </div>
           <p class="hero-status-line hashed-line"><span data-i18n="hero.status.hashed">Hashed-backed agent harness sprint.</span></p>
         </div>
 
