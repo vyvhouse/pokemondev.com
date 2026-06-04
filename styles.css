@@ -5156,28 +5156,23 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
     left: calc(50% - 738px) !important;
     right: auto !important;
     bottom: auto !important;
-    width: min(548px, 34vw) !important;
-    min-height: 224px !important;
-    padding: 20px 24px 18px !important;
-    background: #fff7ff !important;
+    width: min(760px, 45vw) !important;
+    min-height: 142px !important;
+    padding: 20px 26px 18px !important;
+    background: rgba(255, 248, 223, .94) !important;
     display: grid !important;
     align-content: center !important;
-    gap: 12px !important;
+    gap: 14px !important;
   }
 
   .tcg-hero .player-harness-status {
-    top: 548px !important;
+    top: 472px !important;
     left: calc(50% - 738px) !important;
     right: auto !important;
   }
 
   .tcg-hero .hero-cta-copy {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 14px !important;
-    padding-bottom: 12px !important;
-    border-bottom: 4px solid #111 !important;
+    display: none !important;
   }
 
   .tcg-hero .hero-cta-kicker {
@@ -5202,18 +5197,16 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
   }
 
   .tcg-hero .hero-cta-actions {
-    gap: 12px !important;
+    gap: 20px !important;
   }
 
   .tcg-hero .hero-cta-actions .tcg-button {
-    min-height: 44px !important;
-    font-size: .52rem !important;
+    min-height: 52px !important;
+    font-size: .72rem !important;
   }
 
   .tcg-hero .hero-cta-meta {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
+    display: none !important;
   }
 
   .tcg-hero .hero-cta-meta span {
@@ -5229,8 +5222,8 @@ body.glitch-mode .hero-video-shell, body.glitch-mode .news-card, body.glitch-mod
 
   .tcg-hero .hero-status-line {
     margin: 0 !important;
-    padding-top: 2px !important;
-    font-size: .88rem !important;
-    line-height: 1.2 !important;
+    padding-top: 0 !important;
+    font-size: 1.04rem !important;
+    line-height: 1.18 !important;
   }
 }
