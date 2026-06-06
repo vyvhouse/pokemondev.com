@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260604-cta-under-dialog-simple" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="tcg-nav" data-i18n-aria-label="nav.aria" aria-label="상단 내비게이션">
@@ -76,28 +76,20 @@
           <div class="battle-dialog" role="note">
             <p class="battle-shout" data-i18n="hero.shout">AI는 강하다. 하지만 벽은 더 강했다.</p>
           </div>
+          <div class="hero-cta-panel" aria-label="PokemonDev run status">
+            <div class="hero-cta-actions">
+              <a class="tcg-button primary" href="https://luma.com/izrwu9dk" target="_blank" rel="noreferrer"><span data-i18n="hero.cta.pass">Request Pass</span> <span>›</span></a>
+              <a class="tcg-button secondary" href="#proof"><span data-i18n="hero.cta.watch">Watch the run</span> <span>↓</span></a>
+            </div>
+            <p class="hero-status-line"><span data-i18n="hero.status.countdown">T-8 days · limited trainer slots</span></p>
+            <p class="hero-status-line hashed-line"><span data-i18n="hero.status.hashed">Hashed-backed agent harness sprint.</span></p>
+          </div>
           <div class="battle-menu" data-i18n-aria-label="hero.menuAria" aria-label="배틀 커맨드">
             <a class="selected" href="#proof" data-i18n="hero.menu.fight">FIGHT</a>
             <a href="#news" data-i18n="hero.menu.dex">DEX</a>
             <a href="#how" data-i18n="hero.menu.bag">BAG</a>
             <a href="#register" data-i18n="hero.menu.join">JOIN</a>
           </div>
-        </div>
-
-        <div class="hero-cta-panel" aria-label="PokemonDev run status">
-          <div class="hero-cta-copy">
-            <span class="hero-cta-kicker" data-i18n="hero.status.kicker">TRAINER PASS</span>
-            <strong data-i18n="hero.status.title">Run slot command</strong>
-          </div>
-          <div class="hero-cta-actions">
-            <a class="tcg-button primary" href="https://luma.com/izrwu9dk" target="_blank" rel="noreferrer"><span data-i18n="hero.cta.pass">Request Pass</span> <span>›</span></a>
-            <a class="tcg-button secondary" href="#proof"><span data-i18n="hero.cta.watch">Watch the run</span> <span>↓</span></a>
-          </div>
-          <div class="hero-cta-meta" aria-label="Run availability">
-            <span data-i18n="hero.status.countdownShort">T-8 days</span>
-            <span data-i18n="hero.status.slots">Limited trainer slots</span>
-          </div>
-          <p class="hero-status-line hashed-line"><span data-i18n="hero.status.hashed">Hashed-backed agent harness sprint.</span></p>
         </div>
 
         <aside class="hero-video-shell holo-card" id="proof" data-tilt-card data-i18n-aria-label="hero.videoAria" aria-label="AI 포켓몬 플레이 영상">
